@@ -413,3 +413,9 @@ como_usar_cerrar.addEventListener("click", ()=>{  como_usar_content.classList.to
                                                                    como_usar_video.setAttribute("src","#nothing"); },200); });
 
 promesa5_comprar.addEventListener("click",  ()=>{ window.open("https://go.hotmart.com/U74151808E?ap=0a46"); });
+
+
+
+
+
+
