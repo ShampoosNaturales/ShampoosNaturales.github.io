@@ -135,12 +135,12 @@ ul { list-style-type: none; }
 .aside-resp-container-open { display: flex; }
 
                         .aside-resp-content { width: 50%;
-                        	                  height: 100vh;
+                        	                    height: 100vh;
                                               border-left: 1px solid #ccc4;
 
                                               display: flex;
-                                              flex-direction: column;
-                                              justify-content: space-evenly;
+                                              flex-direction: column-reverse;
+                                              justify-content: center;
                                               align-items: flex-start;
                                               background-color: #12161D;
                                               transition: transform .2s ease-in-out;
@@ -176,7 +176,7 @@ ul { list-style-type: none; }
 					                                                                                      padding: 10px; }
 
 					                        .aside-resp-cerrar-container { width: 100%;
-					                        	                           height: 40%;
+					                        	                             height: 10%;
 					                                                       display: flex;
 					                                                       justify-content: flex-start;
 					                                                       align-items: flex-end;
@@ -943,7 +943,7 @@ ul { list-style-type: none; }
                                                                   .promesa1-info-container h4 { font-size: 1em;
                                                                                                 text-align: center; }
 
-                                                                  .promesa1-info-container p { font-size: .7em; }
+                                                                  .promesa1-info-container p { font-size: .77em; }
 
 	                                   .promesa1-img { display: none; }
                                      .promesa1-2-img { display: flex;
@@ -1057,7 +1057,7 @@ ul { list-style-type: none; }
 
                                                                                                  .promesa2-info-container ul li { font-size: .8em;
                                                                                                                                   color: white;
-                                                                                                                                  margin-bottom: 5px;
+                                                                                                                                  margin-bottom: 10px;
                                                                                                                                   list-style-type: initial !important; }
 
 
@@ -1369,7 +1369,7 @@ ul { list-style-type: none; }
                                                                                       .promesa3-info-container h4 { font-size: 1em;
                                                                                                                     text-align: center; }
 
-                                                                                      .promesa3-info-container p { font-style: .7em; } } 
+                                                                                      .promesa3-info-container p { font-style: .77em; } } 
 
 @media screen and (max-width: 770px) { .promesa3-container { border-radius: 10px;
                                                              background-color: #12161D; } }
@@ -1499,7 +1499,7 @@ ul { list-style-type: none; }
                                                                   .promesa4-info-container h4 { text-align: center !important;
                                                                                                 font-size: 1em; }
 
-                                                                  .promesa4-info-container p {  font-size: .7em; } }
+                                                                  .promesa4-info-container p {  font-size: .77em; } }
 
 @media screen and (max-width: 770px) { .promesa4-container { border: 1px solid #12161D;
                                                              border-radius: 10px;
@@ -1635,7 +1635,7 @@ ul { list-style-type: none; }
                                                                                                                      justify-content: center;
                                                                                                                      align-items: center; }
 
-                                                                                      .promesa5-info-container p { font-size: .7em; }
+                                                                                      .promesa5-info-container p { font-size: .77em; }
 
                                                                                       .promesa5-info-container button { align-self: flex-start; } }
 
@@ -1985,11 +1985,12 @@ ul { list-style-type: none; }
                                                 justify-content: center;
                                                 align-items: center;
                                                 font-size: 20px;
-                                                font-family: "Kaushan Script","Ubuntu",sans-serif;
+                                                font-family: "Ubuntu",sans-serif;
                                                 margin-bottom: 25px; }
 
                                                  .accesos-tittle { font-size: 1.5em;
                                                                    color: #E33700;
+                                                                   font-family: "Red Hat Display","Ubuntu",sans-serif;
                                                                    font-weight: bold; }
 
                                                  .accesos-tittle-container p { font-size: .7em;
@@ -2107,6 +2108,72 @@ ul { list-style-type: none; }
 
 @media screen and (max-width: 420px) { .accesos-content,
                                        .accesos-tittle-container { width: 100%; } }
+
+
+
+
+
+/* Codigo seccio Personas en linea*/
+
+.enlinea-container { width: 100%;
+                     height: 100vh;
+
+                     display: none;
+                     flex-direction: column;
+                     justify-content: flex-end;
+                     align-items: flex-start;
+                     padding: 20px;
+                     position: fixed;
+                     top: 0;
+                     left: 0; }
+
+.enlinea-container-open { display: flex; }
+
+                     .enlinea-content { width: 80%;
+                                        max-width: 400px;
+                                        background-color: #000;
+                                        border-radius: 10px;
+                                        padding: 20px;
+                                        margin-bottom: 20px;
+
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                        font-size: 20px;
+                                        font-family: "Ubuntu",sans-serif;
+
+                                        transition: transform 1s ease-in-out;
+                                        transform: translateX(-100%); }
+
+                     .enlinea-content-open { transform: translateX(0); }
+
+                                        .enlinea-content p { font-size: .8em;
+                                                             color: #999;
+                                                             margin-bottom: 10px; }
+
+                                        .enlinea-tittle-container { width: 100%;
+                                                                    display: flex;
+                                                                    flex-wrap: nowrap;
+                                                                    justify-content: flex-start;
+                                                                    align-items: flex-start;
+                                                                    font-size: 20px;
+                                                                    font-family: "Ubuntu",sans-serif; }
+
+                                                                    .enlinea-tittle-container img { margin-right: 5px; }
+
+                                                                    .enlinea-tittle { font-size: .8em;
+                                                                                      color: white;
+                                                                                       }
+
+
+
+
+
+
+
+
+
 
 
 
