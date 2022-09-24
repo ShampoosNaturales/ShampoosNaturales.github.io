@@ -134,6 +134,38 @@ const set_IO = ()=>{ const view_targetas = (entryes)=>{ entryes.forEach(entrada=
 
 
 
+// Codigo seccion Promesa inicial
+
+
+
+
+
+
+
+// Codigo seccion problemas 2
+
+const problemas2_img = document.querySelector(".problemas2-img");
+const problemas2_decoration = document.querySelector(".problemas2-decoration");
+
+
+const view_problemas2_img = (entryes)=>{ entryes.forEach(entrada=>{ if(entrada.isIntersecting){ problemas2_decoration.classList.add("problemas2-decoration-view");
+                                                                                                problemas2_img.classList.add("problemas2-decoration-view"); }
+
+                                                                   else  { problemas2_decoration.classList.remove("problemas2-decoration-view");
+                                                                           problemas2_img.classList.remove("problemas2-decoration-view"); }  }); }
+
+const watch_problemas2_img = new IntersectionObserver(view_problemas2_img);
+watch_problemas2_img.observe(problemas2_img);
+
+
+
+
+
+
+
+
+
+
 // Codigo seccion promesa 1 ----------------------------------------------------------------------
 
 const promesa1_img = document.querySelector(".promesa1-img");

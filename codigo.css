@@ -628,6 +628,222 @@ ul { list-style-type: none; }
                                         .main-img-content { width: 100%; } }
 
 
+
+/* Codigo seccion Promesa  Inicial*/
+
+.promesa_inicial-container { width: 80%;
+                             height: 80vh;
+                             margin: 20px auto;
+
+                             display: flex;
+                             justify-content: center;
+                             align-items: center;
+                             position: relative; }
+
+                             .promesa_inicial-content { width: 70%;
+                                                        background-color: #12161D;
+                                                        border-radius: 10px;
+
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        justify-content: center;
+                                                        align-items: flex-start;
+                                                        padding: 40px;
+                                                        font-size: 20px;
+                                                        font-family: "Ubuntu",sans-serif; }
+
+                                                        .promesa_inicial-content h4 { font-size: 1em;
+                                                                                      color: white;
+                                                                                      font-weight: bold;
+                                                                                      margin-bottom: 10px; }
+
+                                                        .promesa_inicial-content p { font-size: .8em; 
+                                                                                     color: white;
+                                                                                     margin-bottom: 5px; }
+
+                             .promesa_inicial-decoration { width: 50%;
+                                                           height: 100%;
+                                                           position: absolute;
+                                                           top: 0;
+                                                           left: 0;
+                                                           z-index: -1;
+                                                           background: #E33700; 
+                                                           background: -webkit-linear-gradient(to left, #ff6a00, #E33700);
+                                                           background: linear-gradient(to left, #ff6a00, #E33700);
+                                                           clip-path: polygon(0 0, 0 100%, 88% 100%, 0% 0);
+                                                           opacity: 1;
+                                                           transform: translateX(0);
+                                                           transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
+
+
+
+@media screen and (max-width: 1000px) { .promesa_inicial-container { width: 100%;
+                                                                     margin: 0px;
+                                                                     height: max-content;
+                                                                     margin-bottom: 10px; }
+
+                                        .promesa_inicial-decoration { display: none; } }
+
+@media screen and (max-width: 800px) { .promesa_inicial-content p { font-size: .77em;  }
+
+                                       .promesa_inicial-content { padding: 20px; }  }
+
+@media screen and (max-width: 770px) { .promesa_inicial-content { width: 80%; } }
+
+
+
+@media screen and (max-width: 420px) { .promesa_inicial-content { width: 90%; } }
+
+
+
+
+/*Codigo seccion problemas 2*/
+
+.problemas2-container { width: 80%;
+                        height: 80vh;
+                        margin: 10px auto;
+                        margin-bottom: 0px;
+  
+                        display: flex;
+                        flex-direction: row-reverse;
+                        justify-content: center;
+                        align-items: center; }
+
+                      .problemas2-img-container { width: 50%;
+                                                  height: 100%; 
+                                                  display: flex;
+                                                  justify-content: center;
+                                                  align-items: center;
+                                                  position: relative;
+                                                  overflow: hidden; }
+
+                                                .problemas2-img-content { width: 100%;
+                                                                          display: flex;
+                                                                          justify-content: center;
+                                                                          align-items: center; }
+
+                                                                         .problemas2-img { width: 60%;
+                                                                                           transform: translateX(-40px);
+                                                                                           opacity: 0;
+                                                                                           transition: transform 1s ease-in-out, opacity 1s ease-out;
+                                                                                           border-radius: 10px; }
+
+                                                                                          .problemas2-img-view { transform: translateX(0);
+                                                                                                                 opacity: 1; }
+
+                                                .problemas2-decoration { width: 100%;
+                                                                         height: 100%;
+
+                                                                         position: absolute;
+                                                                         top: 0;
+                                                                         left: 0;
+                                                                         z-index: -1;
+
+                                                                         background: #E33700; 
+                                                                         background: -webkit-linear-gradient(to right, #ff6a00, #E33700);
+                                                                         background: linear-gradient(to right, #ff6a00, #E33700);
+                                                                         clip-path: polygon(100% 0, 100% 0, 100% 100%, 9% 100%);
+
+                                                                         transform: translateX(40px);
+                                                                         opacity: 0;
+                                                                         transition: transform 1s ease-out, opacity 1s ease-in-out;  }
+  
+                                                                        .problemas2-decoration-view { transform: translateX(0px);
+                                                                                                      opacity: 1; }
+
+                    .problemas2-content { width: 50%;
+                                          display: flex;
+                                          justify-content: center;
+                                          align-items: center; }
+
+                                          .problemas2-info-container { width: 100%;
+                                                                       display: flex;
+                                                                       flex-direction: column;
+                                                                       justify-content: flex-start;
+                                                                       align-items: flex-start;
+                                                                       padding: 20px;
+                                                                       padding-left: 60px;
+
+                                                                       font-size: 20px; }
+
+                                                                       .problemas2-info-container h4 { font-size: 1.5em;
+                                                                                                       font-weight: bold;
+                                                                                                       font-family: "Red Hat Display","Ubuntu",sans-serif;
+                                                                                                       margin-bottom: 10px;
+                                                                                                       color: #E33700; }
+
+                                                                       .problemas2-info-container p { font-size: .8em;
+                                                                                                      color: white;
+                                                                                                      font-family: "Ubuntu",sans-serif;
+                                                                                                      margin-bottom: 10px;
+                                                                                                      text-align: left; }
+
+
+                                                                       .problemas2-info-container ul  { width: 100%;
+                                                                                                        padding: 0px 20px;
+                                                                                                        font-size: 20px;
+                                                                                                        font-family: "Ubuntu",sans-serif;
+                                                                                                        display: flex;
+                                                                                                        flex-direction: column;
+                                                                                                        justify-content: flex-start;
+                                                                                                        align-items: flex-start; }
+
+                                                                                                        .problemas2-info-container ul li { font-size: .8em;
+                                                                                                                                           color: white;
+                                                                                                                                           margin-bottom: 5px;
+                                                                                                                                           list-style-type: initial !important; }
+
+
+
+@media screen and  (max-width: 1030px) { .problemas2-info-container h4, p { text-align: left; } }
+
+@media screen and (max-width: 1000px) { .problemas2-container { width: 100%; }
+                                        .problemas2-img { width: 80%; } }
+
+@media screen and (max-width: 800px) { .problemas2-container { width: 80%;
+                                                               height: max-content;
+                                                               flex-direction: column;
+                                                               padding: 20px 0px; }
+
+                                       .problemas2-decoration { display: none; }
+
+                                       .problemas2-img { width: 100%; }
+
+                                       .problemas2-content { width: 80%; }
+
+                                                            .problemas2-info-container { padding: 20px;
+                                                                                         justify-content: center;
+                                                                                         align-items: center; }
+                                                                       
+                                                                                         .problemas2-info-container h4 { font-size: 1em;
+                                                                                                                         text-align: center; }
+
+                                                                                         .problemas2-info-container p { font-size: .7em; } }
+
+@media screen and (max-width: 770px) { .problemas2-container { border: 1px solid #12161D;
+                                                               border-radius: 10px;
+                                                               background-color: #12161D; } }
+
+@media screen and (max-width: 500px) { .problemas2-img-container { width: 80%; } }
+
+@media screen and (max-width: 470px) { .problemas2-content { width: 100%; }
+                                       
+                                       .problemas2-info-container { justify-content: flex-start;
+                                                                    align-items: flex-start; }
+
+                                       .problemas2-info-container h4, p { text-align: left !important; }  }
+
+@media screen and (max-width: 420px) { .problemas2-container { width: 90%; } }
+
+
+
+
+
+
+
+
+
+
 /*Codigo seccion promesa 1*/
 
 .promesa1-container { width: 80%;
@@ -829,9 +1045,20 @@ ul { list-style-type: none; }
                                                                                                  margin-bottom: 10px;
                                                                                                  color: #E33700; }
 
-                                                                   .promesa2-info-container p { font-size: .8em;
-                                                                                                color: white;
-                                                                                                font-family: "Ubuntu",sans-serif; }
+                                                                   .promesa2-info-container ul { width: 100%;
+                                                                                                 padding: 0px 20px;
+                                                                                                 font-size: 20px;
+                                                                                                 font-family: "Ubuntu",sans-serif;
+
+                                                                                                 display: flex;
+                                                                                                 flex-direction: column;
+                                                                                                 justify-content: flex-start;
+                                                                                                 align-items: flex-start; }
+
+                                                                                                 .promesa2-info-container ul li { font-size: .8em;
+                                                                                                                                  color: white;
+                                                                                                                                  margin-bottom: 5px;
+                                                                                                                                  list-style-type: initial !important; }
 
 
 @media screen and  (max-width: 1030px) { .promesa-info-container h4, p { text-align: left; } }
@@ -862,8 +1089,7 @@ ul { list-style-type: none; }
                                                              border-radius: 10px;
                                                              background-color: #12161D; } }
 
-@media screen and (max-width: 500px) { .promesa2-img-container { width: 80%;
-                                                                 margin-bottom: 10px; } }
+@media screen and (max-width: 500px) { .promesa2-img-container { width: 80%; } }
 
 @media screen and (max-width: 470px) { .promesa2-content { width: 100%; }
                                        
@@ -1766,7 +1992,7 @@ ul { list-style-type: none; }
                                                                    color: #E33700;
                                                                    font-weight: bold; }
 
-                                                 .accesos-tittle-container p { font-size: .6em;
+                                                 .accesos-tittle-container p { font-size: .7em;
                                                                                color: #ccc5;
                                                                                margin-top: 10px;
                                                                                font-family: "Ubuntu",sans-serif;
