@@ -2122,10 +2122,10 @@ ul { list-style-type: none; }
                      flex-direction: column;
                      justify-content: flex-end;
                      align-items: flex-start;
-                     padding: 20px;
                      position: fixed;
                      top: 0;
-                     left: 0; }
+                     left: 0;
+                     overflow: hidden; }
 
 .enlinea-container-open { display: flex; }
 
@@ -2146,7 +2146,7 @@ ul { list-style-type: none; }
                                         transition: transform 1s ease-in-out;
                                         transform: translateX(-100%); }
 
-                     .enlinea-content-open { transform: translateX(0); }
+                     .enlinea-content-open { transform: translateX(10px); }
 
                                         .enlinea-content p { font-size: .8em;
                                                              color: #999;

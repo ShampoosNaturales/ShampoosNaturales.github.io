@@ -466,10 +466,12 @@ const enlinea_tittle = document.querySelector(".enlinea-tittle");
 const active_enlinea = ()=>{ setInterval(()=>{ let number_random = Math.random()*13+14;
                                                let number_round = Math.round(number_random);
                                                enlinea_tittle.innerHTML = `${number_round} personas ingresaron al curso`;
+
                                                enlinea_container.classList.toggle("enlinea-container-open");
                                                setTimeout(()=>{ enlinea_content.classList.toggle("enlinea-content-open"); },200);
+
                                                setTimeout(()=>{ enlinea_content.classList.toggle("enlinea-content-open");
-                                                                setTimeout(()=>{ enlinea_container.classList.toggle("enlinea-container-open"); } ); },4000);  },15000); }
+                                                                setTimeout(()=>{ enlinea_container.classList.toggle("enlinea-container-open"); },300); },4000);  },15000); }
 
 
 active_enlinea();
