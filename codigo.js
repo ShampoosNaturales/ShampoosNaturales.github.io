@@ -243,9 +243,12 @@ promesa4_button.addEventListener("click", ()=>{ window.open("https://go.hotmart.
 const promesa5_img = document.querySelector(".promesa5-img");
 const promesa5_decoration = document.querySelector(".promesa5-decoration");
 const promesa5_tittle_dinamico = document.querySelector(".promesa5-tittle-dinamico");
+let count = 0;
 
 const view_promesa5_img = (entryes)=>{ entryes.forEach(entrada=>{ if(entrada.isIntersecting) { promesa5_img.classList.add("promesa5-efect-view");
-                                                                                               promesa5_decoration.classList.add("promesa5-efect-view"); }
+                                                                                               promesa5_decoration.classList.add("promesa5-efect-view");
+                                                                                               active_enlinea(count);
+                                                                                               count++; }
                                                                   
                                                                   else { promesa5_img.classList.remove("promesa5-efect-view");
                                                                          promesa5_decoration.classList.remove("promesa5-efect-view"); }  });  }
@@ -463,15 +466,13 @@ const enlinea_container = document.querySelector(".enlinea-container");
 const enlinea_content = document.querySelector(".enlinea-content");
 const enlinea_tittle = document.querySelector(".enlinea-tittle");
 
-const active_enlinea = ()=>{ setInterval(()=>{ let number_random = Math.random()*13+14;
-                                               let number_round = Math.round(number_random);
-                                               enlinea_tittle.innerHTML = `${number_round} personas ingresaron al curso`;
+const active_enlinea = (count)=>{  if(count<=2){ 
+                                   let number_random = Math.random()*13+14;
+                                   let number_round = Math.round(number_random);
+                                   enlinea_tittle.innerHTML = `${number_round} personas ingresaron al curso`;
 
-                                               enlinea_container.classList.toggle("enlinea-container-open");
-                                               setTimeout(()=>{ enlinea_content.classList.toggle("enlinea-content-open"); },200);
+                                   enlinea_container.classList.add("enlinea-container-open");
+                                   setTimeout(()=>{ enlinea_content.classList.add("enlinea-content-open");
+                                                    setTimeout(()=>{ enlinea_content.classList.remove("enlinea-content-open");
+                                                                     setTimeout(()=>{ enlinea_container.classList.remove("enlinea-container-open"); },400); },4000);    },200); }  }
 
-                                               setTimeout(()=>{ enlinea_content.classList.toggle("enlinea-content-open");
-                                                                setTimeout(()=>{ enlinea_container.classList.toggle("enlinea-container-open"); },300); },4000);  },15000); }
-
-
-active_enlinea();

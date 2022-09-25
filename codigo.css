@@ -2143,7 +2143,7 @@ ul { list-style-type: none; }
                                         font-size: 20px;
                                         font-family: "Ubuntu",sans-serif;
 
-                                        transition: transform 1s ease-in-out;
+                                        transition: transform .5s ease-in-out;
                                         transform: translateX(-100%); }
 
                      .enlinea-content-open { transform: translateX(10px); }
@@ -2163,8 +2163,7 @@ ul { list-style-type: none; }
                                                                     .enlinea-tittle-container img { margin-right: 5px; }
 
                                                                     .enlinea-tittle { font-size: .8em;
-                                                                                      color: white;
-                                                                                       }
+                                                                                      color: white; }
 
 
 
