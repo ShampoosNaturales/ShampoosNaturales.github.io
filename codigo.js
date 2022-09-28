@@ -485,3 +485,25 @@ const active_enlinea = (count)=>{  if(count){ let number_random = Math.random()*
                                                                setTimeout(()=>{ enlinea_content.classList.remove("enlinea-content-open");
                                                                                 setTimeout(()=>{ enlinea_container.classList.remove("enlinea-container-open"); },500);  },4000);  },300); },20000);  }  }
 
+
+
+
+// Codigo seccion intersection observer  de Prueba Social
+
+const social_grid_container = document.querySelector(".social-grid-container");
+const social1 = document.querySelector(".social1-container");
+const social2 = document.querySelector(".social2-container");
+const social3 = document.querySelector(".social3-container");
+const social4 = document.querySelector(".social4-container");
+
+let timers_social = [".7s",".8s",".5s",".6s"];
+let socials = [social1,social2,social3,social4];
+
+
+const view_social_grid = (entryes)=>{ entryes.forEach(entrada=>{ if(entrada.isIntersecting){ for(let i=0; i<timers_social.length; i++) { socials[i].style.transition = `${timers_social[i]} ease-in-out`;
+                                                                                                                                         socials[i].classList.add("social-efect-view"); }  }
+
+                                                                 else { for(let i=0; i<timers_social.length; i++) { socials[i].classList.remove("social-efect-view"); }   } });  }
+
+const watch_social_grid = new IntersectionObserver(view_social_grid);
+watch_social_grid.observe(social_grid_container);
