@@ -2289,6 +2289,76 @@ ul { list-style-type: none; }
 
 
 
+/* Codigo seccion modal de apertura para imagen social*/
+
+.apertura_social-container { width: 100%;
+                             height: 100vh;
+                             background-color: #0008;
+                             padding: 10px;
+
+                             display: none;
+                             justify-content: center;
+                             align-items: center;
+                             position: fixed;
+                             z-index: 200;
+                             top: 0;
+                             left: 0; }
+
+.apertura_social-container-open { display: flex; }
+
+                             .apertura_social-content { width: 50%;
+                                                        background-color: #12161D;
+                                                        border-radius: 10px;
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        padding: 20px;
+                                                        transform: scale(.9);
+                                                        opacity: 0;
+                                                        transition: transform .2s ease-in-out, opacity .2s ease-in-out; }
+
+                             .apertura_social-content-open  { transform: scale(1);
+                                                              opacity: 1; }
+
+                                                        .apertura_social-cerrar-container { width: 100%;
+                                                                                            display: flex;
+                                                                                            justify-content: flex-end;
+                                                                                            align-items: center;
+                                                                                            padding-right: 10px;
+                                                                                            margin-bottom: 20px; }
+
+                                                                                            .apertura_social-cerrar { cursor: pointer;
+                                                                                                                      transition: transform .2s ease-in-out; }
+
+                                                                                                                      .apertura_social-cerrar:hover { transform: rotate(90deg); }
+
+                                                        .apertura_social-img-container { width: 50%; }
+
+                                                                                         .apertura_social-img-container img { width: 100%;
+                                                                                                                              border-radius: 10px; }
+
+
+@media screen and (max-width: 1300px) { .apertura_social-img-container { width: 60%; } }
+
+@media screen and (max-width: 1100px) { .apertura_social-img-container { width: 70%; } }
+
+@media screen and (max-width: 900px) { .apertura_social-img-container { width: 80%; } }
+
+@media screen and  (max-width: 800px) { .apertura_social-img-container { width: 90%; }
+                                        .apertura_social-content { width: 60%; }  }
+
+@media screen and  (max-width: 600px) { .apertura_social-img-container { width: 100%; }
+                                        .apertura_social-content { width: 70%; }  }
+
+@media screen and (max-width: 500px) { .apertura_social-content { width: 80%; } }
+
+@media screen and (max-width: 450px) { .apertura_social-content { width: 90%; } }
+ 
+@media screen and (max-width: 420px) { .apertura_social-content { width: 99%; } }
+
+
+
 
 /*Codigo seccion pie de pagina (final)*/
 

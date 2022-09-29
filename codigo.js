@@ -506,3 +506,31 @@ const view_social_grid = (entryes)=>{ entryes.forEach(entrada=>{ if(entrada.isIn
 
 const watch_social_grid = new IntersectionObserver(view_social_grid);
 watch_social_grid.observe(social_grid_container);
+
+
+//  Codigo de apertura de imagenes de Prueba Socia  
+
+const social = document.querySelectorAll(".social");
+const apertura_social_container = document.querySelector(".apertura_social-container");
+const apertura_social_content = document.querySelector(".apertura_social-content");
+const apertura_social_cerrar = document.querySelector(".apertura_social-cerrar");
+const apertura_img_container = document.querySelector(".apertura_social-img-container");
+
+let img;
+
+social.forEach(s=>{  s.addEventListener("click", (e)=>{  let target = e.target.className;
+                                                         let division = target.split(" ");
+                                                         let reDivision = division[1];
+                                                         let finalDivision = reDivision.split("-")[0];
+                                                         
+                                                         img = document.createElement("IMG");
+                                                         img.classList.add("img_insertada");
+                                                         img.setAttribute("src",`multimedia/imagenes/${finalDivision}.webp`);
+                                                         apertura_img_container.appendChild(img);
+
+                                                         apertura_social_container.classList.add("apertura_social-container-open");
+                                                         setTimeout(()=>{ apertura_social_content.classList.add("apertura_social-content-open"); },300); });  });
+
+apertura_social_cerrar.addEventListener("click", ()=>{ apertura_social_content.classList.remove("apertura_social-content-open");
+                                                       setTimeout(()=>{ apertura_social_container.classList.remove("apertura_social-container-open");
+                                                                        apertura_img_container.removeChild(img); },300);  });
