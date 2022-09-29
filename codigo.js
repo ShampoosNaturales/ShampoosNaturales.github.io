@@ -210,9 +210,12 @@ watch_promesa2_img.observe(promesa2_img);
 
 const promesa3_img = document.querySelector(".promesa3-img");
 const promesa3_decoration = document.querySelector(".promesa3-decoration");
+let count = true;
 
 const view_promesa3_img = (entryes)=>{ entryes.forEach(entrada=>{  if(entrada.isIntersecting){ promesa3_img.classList.add("promesa3-efect-view");
-                                                                                               promesa3_decoration.classList.add("promesa3-efect-view"); }
+                                                                                               promesa3_decoration.classList.add("promesa3-efect-view");
+                                                                                               active_enlinea(count);
+                                                                                               count = false;   }
                                                                                                
                                                                    else { promesa3_img.classList.remove("promesa3-efect-view");
                                                                           promesa3_decoration.classList.remove("promesa3-efect-view"); }       }); }
@@ -243,12 +246,9 @@ promesa4_button.addEventListener("click", ()=>{ window.open("https://go.hotmart.
 const promesa5_img = document.querySelector(".promesa5-img");
 const promesa5_decoration = document.querySelector(".promesa5-decoration");
 const promesa5_tittle_dinamico = document.querySelector(".promesa5-tittle-dinamico");
-let count = true;
 
 const view_promesa5_img = (entryes)=>{ entryes.forEach(entrada=>{ if(entrada.isIntersecting) { promesa5_img.classList.add("promesa5-efect-view");
-                                                                                               promesa5_decoration.classList.add("promesa5-efect-view");
-                                                                                               active_enlinea(count);
-                                                                                               count = false; }
+                                                                                               promesa5_decoration.classList.add("promesa5-efect-view"); }
                                                                   
                                                                   else { promesa5_img.classList.remove("promesa5-efect-view");
                                                                          promesa5_decoration.classList.remove("promesa5-efect-view"); }  });  }
@@ -385,8 +385,7 @@ if(User) { promesa5_generar.setAttribute("disabled",false);
 
 
 
-//  10:23 empezo
-//  12:23 terminaría
+
 
 promesa5_generar.addEventListener("click", ()=>{ generar_cupon_container.classList.toggle("generar_cupon-container-open");
                                                  setTimeout(()=>{ generar_cupon_content.classList.toggle("generar_cupon-content-open");
