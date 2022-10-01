@@ -775,23 +775,8 @@ ul { list-style-type: none; }
                                                                        .problemas2-info-container p { font-size: .8em;
                                                                                                       color: white;
                                                                                                       font-family: "Ubuntu",sans-serif;
-                                                                                                      margin-bottom: 10px;
+                                                                                                      margin-bottom: 20px;
                                                                                                       text-align: left; }
-
-
-                                                                       .problemas2-info-container ul  { width: 100%;
-                                                                                                        padding: 0px 20px;
-                                                                                                        font-size: 20px;
-                                                                                                        font-family: "Ubuntu",sans-serif;
-                                                                                                        display: flex;
-                                                                                                        flex-direction: column;
-                                                                                                        justify-content: flex-start;
-                                                                                                        align-items: flex-start; }
-
-                                                                                                        .problemas2-info-container ul li { font-size: .8em;
-                                                                                                                                           color: white;
-                                                                                                                                           margin-bottom: 5px;
-                                                                                                                                           list-style-type: initial !important; }
 
 
 
