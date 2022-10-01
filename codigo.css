@@ -2202,7 +2202,8 @@ ul { list-style-type: none; }
                                              grid-template-rows: repeat(2,minmax(250px,300px));
                                              grid-gap: 20px; }
 
-                                             .social-grid-container div { border-radius: 10px; }
+                                             .social-grid-container div { border-radius: 10px;
+                                                                          cursor: pointer; }
 
                                                                          .social1-container { background-image: url(multimedia/imagenes/social1.webp);
                                                                                               background-position: top;
@@ -2360,12 +2361,141 @@ ul { list-style-type: none; }
 
 
 
-/*Codigo seccion pie de pagina (final)*/
+/* Codigo seccion final*/
+
+.final-container { width: 80%;
+                   height: 80vh;
+                   margin: 20px auto;
+
+                   display: flex;
+                   flex-direction: row;
+                   justify-content: center;
+                   align-items: center; }
+
+                   .final-content { width: 50%;
+                                    padding: 20px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                    font-size: 20px;
+                                    font-family: "Ubuntu",sans-serif; }
+
+                                    .final-tittle1 { font-size: 1.5em;
+                                                     font-family: "Red Hat Display","Ubuntu",sans-serif;
+                                                     font-weight: bold;
+                                                     color: transparent;
+                                                     -webkit-text-stroke: 1px white;
+                                                     margin-bottom: 10px;
+                                                     text-align: left; }
+
+                                    .final-tittle2 { font-size: 1.4em;
+                                                     color: #E33700;
+                                                     font-weight: bold;
+                                                     font-family: "Red Hat Display",sans-serif;
+                                                     margin-bottom: 20px;
+                                                     text-align: left; }
+
+                                    .final-content button { width: max-content;
+                                                            padding: 8px 20px;
+                                                            font-size: .8em;
+                                                            font-family: "Ubuntu";
+                                                            font-weight: bold;
+                                                            color: white;
+                                                            background-color: #E33700;
+                                                            border: none;
+                                                            border-radius: 15px;
+                                                            outline: none;
+                                                            margin-bottom: 8px;
+                                                            cursor: pointer;
+                                                            transition: background-color .2s ease-in-out;
+                                                            text-align: center; }
+
+                                                            .final-content button:hover { background-color: #E22700; }
+
+                                    .final-content p { font-size: .8em;
+                                                       color: #ccc5;
+                                                       text-align: left; }
+
+                  .final-img-container { width: 50%;
+                                         height: 100%;
+                                         display: flex;
+                                         justify-content: center;
+                                         align-items: center;
+                                         position: relative;
+                                         overflow: hidden; }
+
+                                         .final-decoration { width: 100%;
+                                                             height: 100%;
+
+                                                             position: absolute;
+                                                             top: 0;
+                                                             left: 0;
+                                                             z-index: -1;
+                                                             background: #E33700; 
+                                                             background: -webkit-linear-gradient(to right, #ff6a00, #E33700);
+                                                             background: linear-gradient(to right, #ff6a00, #E33700);
+                                                             clip-path: polygon(100% 0, 100% 0, 100% 100%, 9% 100%);
+                                                             opacity: 0;
+                                                             transform: translateX(40px);
+                                                             transition: transform 1s ease-in-out, opacity 1s ease-in-out;  }
+
+
+                                          .final-img { width: 80%;
+                                                       opacity: 0;
+                                                       transform: translateX(-40px);
+                                                       transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+                                                       filter: drop-shadow(0 0 10px #E33700); }
+
+                                          
+                                          .final-efect-view { opacity: 1;
+                                                              transform: translateX(0); }
+
+
+@media screen and (max-width: 1140px) { .final-img { width: 90%; } }
+
+@media screen and (max-width: 1000px) { .final-container { width: 100%; } }
+
+@media screen and (max-width: 800px) { .final-container { flex-direction: column;
+                                                          height: max-content;
+                                                          background-color: #12161D;
+                                                          margin-bottom: 0px; }
+
+                                       .final-content { width: 80%;
+                                                        height: max-content; }
+
+                                       .final-img-container { width: 80%;
+                                                              padding: 20px;
+                                                              height: max-content; }
+
+                                       .final-decoration { display: none; } }
+
+@media screen and (max-width: 450px) { .final-img { width: 100%; } 
+                                       .final-content,
+                                       .final-img-container { width: 100%; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Codigo seccion pie de pagina */
 
 .footer-container { width: 100%;
                     height: 200px;
                     background-color: #12161D;
-                    margin-top: 20px;
 
                     display: flex;
                     justify-content: center;
@@ -2380,7 +2510,11 @@ ul { list-style-type: none; }
                                       display: flex;
                                       flex-direction: column;
                                       justify-content: center;
-                                      align-items: center; }
+                                      align-items: center;
+                                      opacity: 0;
+                                      transition: opacity 1s ease-out; }
+
+                    .footer-content-open { opacity: 1; }
 
                                       .footer-content span { font-size: .8em;
                                                              color: #999;

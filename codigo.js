@@ -529,8 +529,39 @@ social.forEach(s=>{  s.addEventListener("click", (e)=>{  let target = e.target.c
                                                          apertura_img_container.appendChild(img);
 
                                                          apertura_social_container.classList.add("apertura_social-container-open");
-                                                         setTimeout(()=>{ apertura_social_content.classList.add("apertura_social-content-open"); },300); });  });
+                                                         setTimeout(()=>{ apertura_social_content.classList.add("apertura_social-content-open"); },100); });  });
 
 apertura_social_cerrar.addEventListener("click", ()=>{ apertura_social_content.classList.remove("apertura_social-content-open");
                                                        setTimeout(()=>{ apertura_social_container.classList.remove("apertura_social-container-open");
                                                                         apertura_img_container.removeChild(img); },300);  });
+
+
+
+
+//  Codigo seccion final intersection observer
+
+const final_img = document.querySelector(".final-img");
+const final_decoration = document.querySelector(".final-decoration");
+
+const view_final_img = (entryes)=>{ entryes.forEach(entrada=>{ if(entrada.isIntersecting){ final_img.classList.add("final-efect-view");
+                                                                                           final_decoration.classList.add("final-efect-view"); }
+                                                               
+                                                               else { final_img.classList.remove("final-efect-view");
+                                                                      final_decoration.classList.remove("final-efect-view"); }  });  }
+
+const watch_final_img = new IntersectionObserver(view_final_img);
+watch_final_img.observe(final_img);
+
+
+
+
+
+//  Codigo seccion footer intersection observer 
+
+const footer_content = document.querySelector(".footer-content");
+
+const view_footer_content = (entryes)=>{ entryes.forEach(entrada=>{ if(entrada.isIntersecting){ setTimeout(()=>{ footer_content.classList.add("footer-content-open"); },500); }
+                                                                    else footer_content.classList.remove("footer-content-open");  }); }
+
+const watch_footer_content = new IntersectionObserver(view_footer_content);
+watch_footer_content.observe(footer_content);
