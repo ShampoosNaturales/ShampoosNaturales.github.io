@@ -553,6 +553,14 @@ const watch_final_img = new IntersectionObserver(view_final_img);
 watch_final_img.observe(final_img);
 
 
+// Codigo seccion final redireccion de botones
+
+const final_ingresar = document.querySelector(".final-ingresar");
+const final_whatsapp = document.querySelector(".final-whatsapp");
+
+final_ingresar.addEventListener("click", ()=>{ window.open("https://go.hotmart.com/U74151808E?ap=0a46");  });
+final_whatsapp.addEventListener("click", ()=>{ window.open("https://wa.me/message/VJCLXO6NKU5KO1") });
+
 
 
 
