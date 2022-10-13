@@ -1113,7 +1113,7 @@ ul { list-style-type: none; }
                                     .info1-content h4 { font-size: 1.5em;
                                                         color: #E33700;
                                                         font-weight: bold;
-                                                        font-family: "Kaushan Script","Ubuntu",sans-serif;
+                                                        font-family: "Red Hat Display","Ubuntu",sans-serif;
                                                         margin-bottom: 10px; }
 
                                     .info1-content p { font-size: .8em;
@@ -1154,6 +1154,8 @@ ul { list-style-type: none; }
                                        .info1-content { width: 80%; }
 
                                        .info1-img { border-radius: 10px; } }
+
+@media screen and (max-width: 620px) { .info1-content h4 { font-size: 1.2em; } }
 
 @media screen and (max-width: 770px) { .info1-img-container, .info1-content { width: 85%; } }
 
@@ -1202,7 +1204,7 @@ ul { list-style-type: none; }
 
                                     .info2-content h4 { font-size: 1.5em;
                                                         color: #E33700;
-                                                        font-family: "Kaushan Script","Ubuntu",sans-serif;
+                                                        font-family: "Red Hat Display","Ubuntu",sans-serif;
                                                         margin-bottom: 10px;
                                                         font-weight: bold; }
                                    
@@ -1245,6 +1247,8 @@ ul { list-style-type: none; }
                                        .info2-content { width: 80%; }
 
                                        .info2-img { border-radius: 10px; } }
+
+@media screen and (max-width: 620px) { .info2-content h4 { font-size: 1.2em; } }
 
 @media screen and (max-width: 770px) { .info2-img-container, .info2-content { width: 85%; } }
 
@@ -2279,7 +2283,7 @@ ul { list-style-type: none; }
 
 .apertura_social-container { width: 100%;
                              height: 100vh;
-                             background-color: #0008;
+                             background-color: rgba(0,0,0,.9);
                              padding: 10px;
 
                              display: none;
@@ -2397,6 +2401,8 @@ ul { list-style-type: none; }
                                                             text-align: center; }
 
                                                             .final-content button:hover { background-color: #E22700; }
+
+                                    .final-whatsapp { background-color: green !important; }
 
                                     .final-content p { font-size: .8em;
                                                        color: #ccc5;

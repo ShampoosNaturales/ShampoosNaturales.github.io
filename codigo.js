@@ -136,8 +136,17 @@ const set_IO = ()=>{ const view_targetas = (entryes)=>{ entryes.forEach(entrada=
 
 // Codigo seccion Promesa inicial
 
+const promesa_inicial_content = document.querySelector(".promesa_inicial-content");
+const promesa_inicial_decoration = document.querySelector(".promesa_inicial-decoration");
 
+const view_promesa_inicial_content = (entryes)=>{ entryes.forEach(entrada=>{ if(entrada.isIntersecting) {  promesa_inicial_content.classList.add("promesa_inicial-efect-view");
+                                                                                                           promesa_inicial_decoration.classList.add("promesa_inicial-efect-view"); }
 
+                                                                             else { promesa_inicial_content.classList.remove("promesa_inicial-efect-view");
+                                                                                    promesa_inicial_decoration.classList.remove("promesa_inicial-efect-view"); }  }); }
+
+const watch_promesa_inicial_content = new  IntersectionObserver(view_promesa_inicial_content);
+watch_promesa_inicial_content.observe(promesa_inicial_content);
 
 
 
@@ -259,6 +268,7 @@ watch_promesa5_img.observe(promesa5_img);
 
 // --------- rellenar tittle dinamico con mes correspondiente ----------
 
+const final_tittle1 = document.querySelector(".final-tittle1");
 const list_Months = [[0,"Enero"],[1,"Febrero"],[2,"Marzo"],[3,"Abril"],[4,"Mayo"],[5,"Junio"],[6,"Julio"],[7,"Agosto"],[8,"Septiembre"],[9,"Octubre"],[10,"Noviembre"],[11,"Diciembre"]];
 
 const datos = new Date();
@@ -267,6 +277,8 @@ let mes = datos.getMonth();
 for(let i=0; i <list_Months.length; i++) { if(mes == list_Months[i][0]) { let month_current = list_Months[i][1];
                                                                           let new_tittle = `${month_current} al 50% OFF`;
                                                                           promesa5_tittle_dinamico.innerHTML = new_tittle;
+                                                                          let new_tittle2 = `Solo por ${month_current}`;
+                                                                          final_tittle1.innerHTML = new_tittle2;
                                                                           break;  } }
 
 // Abrir modal de promesa 5
