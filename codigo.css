@@ -2405,7 +2405,7 @@ ul { list-style-type: none; }
                                     .final-whatsapp { background-color: green !important; }
 
                                     .final-content p { font-size: .8em;
-                                                       color: #ccc5;
+                                                       color: #ccc;
                                                        text-align: left; }
 
                   .final-img-container { width: 50%;
@@ -2432,20 +2432,20 @@ ul { list-style-type: none; }
                                                              transition: transform 1s ease-in-out, opacity 1s ease-in-out;  }
 
 
-                                          .final-img { width: 80%;
+                                          .final-img { width: 90%;
                                                        opacity: 0;
                                                        position: relative;
                                                        z-index: 2;
                                                        transform: translateX(-40px);
                                                        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-                                                       filter: drop-shadow(0 0 10px #E33700); }
+                                                       filter: drop-shadow(0 0 10px #E22700); }
 
                                           
                                           .final-efect-view { opacity: 1;
                                                               transform: translateX(0); }
 
 
-@media screen and (max-width: 1140px) { .final-img { width: 90%; } }
+@media screen and (max-width: 1140px) { .final-img { width: 100%; } }
 
 @media screen and (max-width: 1000px) { .final-container { width: 100%; } }
 
@@ -2459,16 +2459,16 @@ ul { list-style-type: none; }
 
                                        .final-img-container { width: 80%;
                                                               padding: 20px;
-                                                              height: 50vh; }
+                                                              height: 60vh; }
 
                                        .final-decoration { display: flex; } }
 
-@media screen and (max-width: 700px) { .final-img-container { height: 40vh; }
+@media screen and (max-width: 700px) { .final-img-container { height: 50vh; }
                                        .final-img { width: 100%; }
                                        .final-decoration { clip-path: polygon(100% 0, 50% 100%, 100% 100%); } }
 
-@media screen and (max-width: 500px) { .final-img-container { height: 30vh; }
-                                       .final-decoration { clip-path: polygon(100% 10%, 50% 100%, 100% 100%); } }
+@media screen and (max-width: 500px) { .final-img-container { height: 40vh; }
+                                       .final-decoration { clip-path: polygon(100% 0, 50% 100%, 100% 100%); } }
 
 @media screen and (max-width: 450px) { .final-img { width: 100%; } 
                                        .final-content,

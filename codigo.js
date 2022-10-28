@@ -56,7 +56,7 @@ aside_resp_dudas.addEventListener("click" ,()=>{ preguntanos_container.classList
 preguntanos_cerrar.addEventListener("click", ()=>{  preguntanos_content.classList.toggle("preguntanos-content-open");
                                                     setTimeout(()=>{ preguntanos_container.classList.toggle("preguntanos-container-open"); },300); });
 
-preguntanos_whatsapp.addEventListener("click", ()=>{ window.open("https://wa.me/message/VJCLXO6NKU5KO1");  });
+preguntanos_whatsapp.addEventListener("click", ()=>{ window.open("https://wa.link/sjabi3");  });
 
 
 
@@ -571,7 +571,7 @@ const final_ingresar = document.querySelector(".final-ingresar");
 const final_whatsapp = document.querySelector(".final-whatsapp");
 
 final_ingresar.addEventListener("click", ()=>{ window.open("https://go.hotmart.com/U74151808E?ap=0a46");  });
-final_whatsapp.addEventListener("click", ()=>{ window.open("https://wa.me/message/VJCLXO6NKU5KO1") });
+final_whatsapp.addEventListener("click", ()=>{ window.open("https://wa.link/sjabi3") });
 
 
 
