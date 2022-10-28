@@ -275,7 +275,7 @@ const datos = new Date();
 let mes = datos.getMonth();
 
 for(let i=0; i <list_Months.length; i++) { if(mes == list_Months[i][0]) { let month_current = list_Months[i][1];
-                                                                          let new_tittle = `${month_current} al 50% OFF`;
+                                                                          let new_tittle = `Ahorra el 50% solo por ${month_current}`;
                                                                           promesa5_tittle_dinamico.innerHTML = new_tittle;
                                                                           let new_tittle2 = `Solo por ${month_current}`;
                                                                           final_tittle1.innerHTML = new_tittle2;
