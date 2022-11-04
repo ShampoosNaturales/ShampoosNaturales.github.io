@@ -4,9 +4,7 @@
     box-sizing: border-box;
     user-select: none; }
 
-body { background: #16222A;
-       background: -webkit-linear-gradient(to right, #3A6073, #16222A);
-       background: linear-gradient(to right, #161A23, #16222A);  }
+body { background-color: #161A23;  }
 
 ul { list-style-type: none; }
 
