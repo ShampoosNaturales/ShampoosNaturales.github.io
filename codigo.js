@@ -136,17 +136,18 @@ const set_IO = ()=>{ const view_targetas = (entryes)=>{ entryes.forEach(entrada=
 
 // Codigo seccion Promesa inicial
 
+const promesa_inicial_container  = document.querySelector(".promesa_inicial-container");
 const promesa_inicial_content = document.querySelector(".promesa_inicial-content");
 const promesa_inicial_decoration = document.querySelector(".promesa_inicial-decoration");
 
-const view_promesa_inicial_content = (entryes)=>{ entryes.forEach(entrada=>{ if(entrada.isIntersecting) {  promesa_inicial_content.classList.add("promesa_inicial-efect-view");
-                                                                                                           promesa_inicial_decoration.classList.add("promesa_inicial-efect-view"); }
+const view_promesa_inicial_container = (entryes)=>{ entryes.forEach(entrada=>{ if(entrada.isIntersecting) {  promesa_inicial_content.classList.add("promesa_inicial-efect-view");
+                                                                                                             promesa_inicial_decoration.classList.add("promesa_inicial-efect-view"); }
 
-                                                                             else { promesa_inicial_content.classList.remove("promesa_inicial-efect-view");
-                                                                                    promesa_inicial_decoration.classList.remove("promesa_inicial-efect-view"); }  }); }
+                                                                               else { promesa_inicial_content.classList.remove("promesa_inicial-efect-view");
+                                                                                      promesa_inicial_decoration.classList.remove("promesa_inicial-efect-view"); }  }); }
 
-const watch_promesa_inicial_content = new  IntersectionObserver(view_promesa_inicial_content);
-watch_promesa_inicial_content.observe(promesa_inicial_content);
+const watch_promesa_inicial_container = new  IntersectionObserver(view_promesa_inicial_container);
+watch_promesa_inicial_container.observe(promesa_inicial_container);
 
 
 

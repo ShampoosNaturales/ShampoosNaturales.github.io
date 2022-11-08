@@ -651,7 +651,10 @@ ul { list-style-type: none; }
                                                         align-items: flex-start;
                                                         padding: 40px;
                                                         font-size: 20px;
-                                                        font-family: "Ubuntu",sans-serif; }
+                                                        opacity: 0;
+                                                        transform: translateY(60px);
+                                                        font-family: "Ubuntu",sans-serif;
+                                                        transition: transform 1s ease-out, opacity .5s ease-in-out; }
 
                                                         .promesa_inicial-content h4 { font-size: 1em;
                                                                                       color: white;
@@ -672,9 +675,13 @@ ul { list-style-type: none; }
                                                            background: -webkit-linear-gradient(to left, #ff6a00, #E33700);
                                                            background: linear-gradient(to left, #ff6a00, #E33700);
                                                            clip-path: polygon(0 0, 0 100%, 88% 100%, 0% 0);
-                                                           opacity: 1;
-                                                           transform: translateX(0);
+                                                           opacity: 0;
+                                                           transform: translateX(-40px);
                                                            transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
+
+                             .promesa_inicial-efect-view { transform: translateX(0);
+                                                           transform: translateY(0);
+                                                           opacity: 1; }
 
 
 
