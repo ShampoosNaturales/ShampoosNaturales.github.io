@@ -485,17 +485,7 @@ const active_enlinea = (count)=>{  if(count){ let number_random = Math.random()*
                                               enlinea_container.classList.add("enlinea-container-open");
                                               setTimeout(()=>{ enlinea_content.classList.add("enlinea-content-open");
                                                                setTimeout(()=>{ enlinea_content.classList.remove("enlinea-content-open");
-                                                                                setTimeout(()=>{ enlinea_container.classList.remove("enlinea-container-open"); },500);  },4000);  },300);
-
-
-                                              setTimeout(()=>{  let number_random = Math.random()*13+14;
-                                              let number_round = Math.round(number_random);
-                                              enlinea_tittle.innerHTML = `${number_round} personas ingresaron al curso`;
-
-                                              enlinea_container.classList.add("enlinea-container-open");
-                                              setTimeout(()=>{ enlinea_content.classList.add("enlinea-content-open");
-                                                               setTimeout(()=>{ enlinea_content.classList.remove("enlinea-content-open");
-                                                                                setTimeout(()=>{ enlinea_container.classList.remove("enlinea-container-open"); },500);  },4000);  },300); },20000);  }  }
+                                                                                setTimeout(()=>{ enlinea_container.classList.remove("enlinea-container-open"); },500);  },4000);  },300); }  }
 
 
 
