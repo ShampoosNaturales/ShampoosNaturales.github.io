@@ -639,20 +639,11 @@ ul { list-style-type: none; }
                              display: flex;
                              justify-content: center;
                              align-items: center;
-                             position: relative;
-                             border-radius: 10px;
-
-                             background-image: url(multimedia/imagenes/promesa_inicial.webp);
-                             background-position: center;
-                             background-size: cover;
-                             background-repeat: no-repeat;
-                             background-attachment: fixed; }
+                             position: relative; }
 
                              .promesa_inicial-content { width: 70%;
                                                         background-color: #12161D;
                                                         border-radius: 10px;
-                                                        position: relative;
-                                                        z-index: 2;
 
                                                         display: flex;
                                                         flex-direction: column;
@@ -679,15 +670,14 @@ ul { list-style-type: none; }
                                                            position: absolute;
                                                            top: 0;
                                                            left: 0;
-                                                           z-index: 1;
+                                                           z-index: -1;
                                                            background: #E33700; 
                                                            background: -webkit-linear-gradient(to left, #ff6a00, #E33700);
                                                            background: linear-gradient(to left, #ff6a00, #E33700);
                                                            clip-path: polygon(0 0, 0 100%, 88% 100%, 0% 0);
                                                            opacity: 0;
                                                            transform: translateX(0);
-                                                           transition: opacity 1s ease-in-out;
-                                                           border-radius: 10px; }
+                                                           transition: opacity 1s ease-in-out; }
 
                              .promesa_inicial-efect-view { transform: translateY(0);
                                                            opacity: 1; }
@@ -697,11 +687,7 @@ ul { list-style-type: none; }
 @media screen and (max-width: 1000px) { .promesa_inicial-container { width: 100%;
                                                                      margin: 0px;
                                                                      height: max-content;
-                                                                     margin-bottom: 10px;
-                                                                     padding: 50px 0px;
-                                                                     border-radius: 0px; }
-
-                                        .promesa_inicial-content { background-color: rgba(18,22,29,.9); }
+                                                                     margin-bottom: 10px; }
 
                                         .promesa_inicial-decoration { display: none; } }
 
