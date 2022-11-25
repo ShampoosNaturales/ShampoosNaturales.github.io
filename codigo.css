@@ -192,6 +192,7 @@ ul { list-style-type: none; }
 
 /*Codigo seccion modal sobre master classes*/
 
+
 .sobre_MC-container { width: 100%;
                       height: 100vh;
                       background-color: #0007;
@@ -445,11 +446,19 @@ ul { list-style-type: none; }
 
 @media screen and (max-width: 600px) { .sobre_MC-content,
                                        .sobre_cupon-content,
-                                       .preguntanos-content { width: 80%; } }
+                                       .preguntanos-content { width: 80%; }
+
+                                       .sobre_MC-img-container,
+                                       .sobre_cupon-img-container img,
+                                       .preguntanos-img-container img { width: 60%; } }
 
 @media screen and (max-width: 500px) { .sobre_MC-content,
                                        .sobre_cupon-content,
-                                       .preguntanos-content { width: 90%; } }
+                                       .preguntanos-content { width: 90%; }
+
+                                       .sobre_MC-img-container,
+                                       .sobre_cupon-img-container img,
+                                       .preguntanos-img-container img { width: 70%; } }
 
 
 
@@ -487,7 +496,7 @@ ul { list-style-type: none; }
                                                                                font-weight: bold; }
 
                                                             .main-tittle { font-size: 3em;
-                                                                           font-family: "Kaushan Script","Ubuntu",sans-serif;
+                                                                           font-family: "Red Hat Display","Ubuntu",sans-serif;
                                                                            color: #E33700;
                                                                            font-weight: bold;
                                                                            margin-bottom: 10px; }
@@ -649,7 +658,7 @@ ul { list-style-type: none; }
                              background-attachment: scroll; }
 
                              .promesa_inicial-content { width: 70%;
-                                                        background-color: #12161D;
+                                                        background-color: rgba(18,22,29,.99);
                                                         border-radius: 10px;
                                                         position: relative;
                                                         z-index: 2;
@@ -700,9 +709,7 @@ ul { list-style-type: none; }
                                                                      height: max-content;
                                                                      margin-bottom: 10px;
                                                                      padding: 50px 0px;
-                                                                     border-radius: 0px; }
-
-                                        .promesa_inicial-content { background-color: rgba(18,22,29,.9); }
+                                                                     border-radius: 0px; } }
 
                                         .promesa_inicial-decoration { display: none; } }
 
@@ -714,7 +721,9 @@ ul { list-style-type: none; }
 
 
 
-@media screen and (max-width: 420px) { .promesa_inicial-content { width: 90%; } }
+@media screen and (max-width: 420px) { .promesa_inicial-content { width: 90%; }
+                                       
+                                       .promesa_inicial-container { background-size: auto; } }
 
 
 
