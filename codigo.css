@@ -1,2195 +1,161 @@
 
-* { padding: 0px;
-    margin: 0px;
+* { padding: 0;
+    margin: 0;
     box-sizing: border-box;
     user-select: none; }
 
-body { background-color: #161A23;  }
+body { background-color: #161A23;
+       padding: 0 120px; }
 
-ul { list-style-type: none; }
+@media screen and (max-width: 850px) { body { padding: 0 80px; } }
+@media screen and (max-width: 700px) { body { padding: 0px 10px; } }
 
+ul { color:white; }
 
-
-/*  Fonts*/
-/*  font-family: 'Kaushan Script', "Ubuntu";
-    font-family: 'Red Hat Display',Ubuntu;
-    font-family: "Ubuntu",sans-serif; */
-/*Color de targetas : #12161D */
-/*Color de fondo : #161A23*/
-
-.importante { color: #E33700 !important; }
-.lower { font-size: .7em; }
+.importante { color: #6ABB35; }
 
 
 
 
 
 
-/*Codigo seccion barra de navegacion normal*/
-
-.nav-container { width: 100%;
-                 display: flex;
-                 flex-direction: row;
-                 justify-content: space-between;
-                 align-items: center;
-                 padding: 20px;
-                 position: absolute;
-                 top: 0;
-                 left: 0;
-                 z-index: 50;  }
-
-                 .nav-logo-container { flex-basis: max-content;
-                                       display: flex;
-                                       flex-direction: row;
-                                       justify-content: center;
-                                       align-items: center;
-                                       font-size: 20px;
-                                       font-family: 'Red Hat Display',Ubuntu,sans-serif;
-                                       margin-left: 40px; }
-
-                                       .nav-logo-container img { width: 25px; }
-
-                                       .nav-logo-container span { font-size: .8em;
-                                                                  color: #E33700;
-                                                                  font-weight: bold;
-                                                                  margin-left: 5px; }
-
-                 .nav-content { flex-basis: max-content;
-
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                margin-right: 20px; }
-
-                                .nav-content ul { width: 100%;
-                                                  display: flex;
-                                                  flex-direction: row;
-                                                  justify-content: center;
-                                                  align-items: center;
-                                                  font-size: 20px;
-                                                  font-family: "Ubuntu",sans-serif; }
-
-                                                  .nav-content ul li { font-size: .77em;
-                                                                       color: white;
-                                                                       margin: 0px 20px;
-                                                                       cursor: pointer;
-                                                                       transition: color .2s ease-in-out; }
-
-                                                  .nav-content ul li:nth-child(4n) { color: #E33700;
-                                                                                     width: max-content;
-                                                                                     padding: 10px;
-                                                                                     background-color: White;
-                                                                                     font-size: .85em;
-                                                                                     font-family: 'Red Hat Display',"Ubuntu",sans-serif;
-                                                                                     border-radius: 15px; }
-
-                                                                       .nav-content ul li:hover { color: #E33700; }
 
 
 
-/*Codigo seccion barra de navegacion responsive*/
-
-.nav-resp-container { width: 100%;
-                      display: none;
-                      flex-direction: row;
-                      justify-content: space-between;
-                      align-items: center;
-                      padding: 15px 10px;
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      z-index: 50; }
-
-                      .nav-resp-logo-container { flex-basis: max-content;
-			                                     display: flex;
-			                                     flex-direction: row;
-			                                     justify-content: center;
-			                                     align-items: center;
-			                                     font-size: 20px;
-			                                     font-family: "Red Hat Display","Ubuntu",sans-serif; }
-
-		                                         .nav-resp-logo-container img { width: 25px; }
-
-		                                         .nav-resp-logo-container span { font-size: .7em;
-		                                                                         color: #E33700;
-		                                                                         margin-left: 5px; }
-
-@media screen and (max-width: 1000px) { .nav-container { display: none; }
-                                        .nav-resp-container { display: flex; } }
-
-
-/*Codigo seccion aside lateral de nav responsive*/
-
-.aside-resp-container { width: 100%;
-                        height: 100vh;
-
-                        display: none;
-                        justify-content: flex-end;
-                        align-items: flex-end;
-
-                        position: fixed;
-                        top: 0px;
-                        left: 0px;
-                        z-index: 100;
-                        background-color: #0005; }
-
-.aside-resp-container-open { display: flex; }
-
-                        .aside-resp-content { width: 50%;
-                        	                    height: 100vh;
-                                              border-left: 1px solid #ccc4;
-
-                                              display: flex;
-                                              flex-direction: column-reverse;
-                                              justify-content: center;
-                                              align-items: flex-start;
-                                              background-color: #12161D;
-                                              transition: transform .2s ease-in-out;
-                                              transform: translateX(100%); }
-
-                        .aside-resp-content-open { transform: translateX(0);}
-
-					                        .aside-resp-botons  { width: 100%;
-					                        	                    height: 50%;
-					                                              padding: 20px;
-
-					                                              display: flex;
-					                                              flex-direction: column;
-					                                              justify-content: center;
-					                                              align-items: flex-start;
-					                                              font-size: 20px;
-					                                              font-family: "Ubuntu",sans-serif; }
-
-					                                              .aside-resp-botons span  { width: 100%;
-					                                                                         text-align: left;
-					                                                                         font-size: .8em;
-					                                                                         color: white;
-					                                                                         font-weight: bold;
-					                                                                         margin-bottom: 40px;
-					                                                                         transition: color .2s ease-in-out; }
-
-					                                                                         .aside-resp-botons span:hover { color: #E33700; }
-
-					                                              .aside-resp-botons span:nth-child(4n) { color: #E33700;
-					                                                                                      background-color: white;
-					                                                                                      border-radius: 5px;
-					                                                                                      width: max-content !important;
-					                                                                                      padding: 10px; }
-
-					                        .aside-resp-cerrar-container { width: 100%;
-					                        	                             height: 10%;
-					                                                       display: flex;
-					                                                       justify-content: flex-start;
-					                                                       align-items: flex-end;
-					                                                       padding: 40px 20px; }
-
-					                                                       .aside-resp-cerrar { transform:  scale(1.3); }
-
-@media screen and (max-width: 510px) { .aside-resp-content { width: 70%; } }
-@media screen and (min-width: 1000px) { .aside-resp-container { display: none; } }
 
 
 
-/*Codigo seccion modal sobre master classes*/
 
 
-.sobre_MC-container { width: 100%;
-                      height: 100vh;
-                      background-color: #0007;
 
-                      display: none;
+
+/*Codigo seccion cabecera de la pagina con logotipo de masterclasses*/
+
+.cabecera_container { width: 100%;
+                      height: max-content;
+                      margin-top: 20px;
+                      display: flex;
                       justify-content: center;
-                      align-items: center;
-                      position: fixed;
-                      top: 0;
-                      left: 0;
-                      z-index: 200; }
+                      align-items: center; }
 
-.sobre_MC-container-open { display: flex; }
-
-                      .sobre_MC-content { width: 40%;
+                      .cabecera_content { width: 100%;
                                           display: flex;
-                                          flex-direction: column;
-                                          justify-content: center;
+                                          flex-direction: row;
+                                          justify-content: flex-start;
                                           align-items: center;
-                                          padding: 20px;
-                                          background-color: #161A23;
-                                          border-radius: 15px;
-                                          position: relative;
-                                          opacity: 0;
-                                          transition: opacity .2s ease-in-out; }
-                      
-                      .sobre_MC-content-open { opacity: 1; }
+                                          font-size: 20px; }
 
-                                          .sobre_MC-cerrar-container { width: 100%;
-                                                                       position: absolute;
-                                                                       top: 0;
-                                                                       left: 0;
-                                                                       display: flex;
-                                                                       justify-content: flex-end;
-                                                                       align-items: center;
-                                                                       padding: 20px; }
+		                                  .cabecera_content img { width: 35px; }
 
-                                                                       .sobre_MC-cerrar { cursor: pointer;
-                                                                                          transition: transform .2s ease-in-out; }
-
-                                                                                          .sobre_MC-cerrar:hover { transform: rotate(90deg); }
-
-                                          .sobre_MC-img-container { width: 50%;
-                                                                    display: flex;
-                                                                    justify-content: center;
-                                                                    align-items: center; }
-
-                                                                    .sobre_MC-img-container img { width: 100%; }
-
-                                          .sobre_MC-info-container { width: 100%;
-                                                                     display: flex;
-                                                                     flex-direction: column;
-                                                                     justify-content: flex-start;
-                                                                     align-items: flex-start;
-                                                                     font-size: 20px;
-                                                                     font-family: "Ubuntu",sans-serif; }
-
-                                                                     .sobre_MC-info-container span { font-size: 1em;
-                                                                                                     color: #E33700;
-                                                                                                     font-weight: bold;
-                                                                                                     margin-bottom: 10px;
-                                                                                                     text-align: left;
-                                                                                                     font-family: "Red Hat Display","Ubuntu"; 
-                                                                                                     text-align: left; }
-
-                                                                     .sobre_MC-info-container p { font-size: .77em;
-                                                                                                  color: #ccc5;
-                                                                                                  text-align: left; }
-
-/*Codigo seccion modal de cupon de descuento*/
-
-.sobre_cupon-container { width: 100%;
-                         height: 100vh;
-                         background-color: #0006;
-
-                         display: none;
-                         justify-content: center;
-                         align-items: center;
-                         position: fixed;
-                         top: 0;
-                         left: 0;
-                         z-index: 200; }
-
-.sobre_cupon-container-open { display: flex; }
-
-                         .sobre_cupon-content { width: 40%;
-                                                padding: 20px;
-                                                background-color: #161A23;
-
-                                                display: flex;
-                                                flex-direction: column;
-                                                justify-content: center;
-                                                align-items: center;
-                                                border-radius: 15px;
-                                                position: relative;
-                                                opacity: 0;
-                                                transition: opacity .2s ease-in-out; }
-                         
-                         .sobre_cupon-content-open { opacity: 1; }
-
-                                                .sobre_cupon-cerrar-container { width: 100%;
-                                                                                display: flex;
-                                                                                justify-content: flex-end;
-                                                                                align-items: center;
-                                                                                padding: 20px;
-                                                                                position: absolute;
-                                                                                top: 0;
-                                                                                left: 0; }
-
-                                                                                .sobre_cupon-cerrar { cursor: pointer;
-                                                                                                      transition: transform .2s ease-in-out; }
-
-                                                                                                      .sobre_cupon-cerrar:hover { transform: rotate(90deg); }
-
-                                                .sobre_cupon-img-container { width: 100%;
-                                                                             display: flex;
-                                                                             justify-content: center;
-                                                                             align-items: center; }
-
-                                                                             .sobre_cupon-img-container img { width: 50%; }
-
-
-                                                .sobre_cupon-info-container { width: 100%;
-                                                                              display: flex;
-                                                                              flex-direction: column;
-                                                                              justify-content: center;
-                                                                              align-items: flex-start;
-                                                                              font-size: 20px;
-                                                                              font-family: "Ubuntu",sans-serif; }
-
-                                                                              .sobre_cupon-info-container span { font-size: 1em;
-                                                                                                                 color: #E33700;
-                                                                                                                 font-weight: bold;
-                                                                                                                 font-family: "Red Hat Display","Ubuntu";
-                                                                                                                 margin-bottom: 10px;
-                                                                                                                 text-align: left; }
-
-                                                                              .sobre_cupon-info-container p { font-size: .8em;
-                                                                                                              color: #ccc5;
-                                                                                                              text-align: left; }
-
-/*Codigo modal preguntanos*/
-
-.preguntanos-container { width: 100%;
-                         height: 100vh;
-                         background-color: #0006;
-
-                         display: none;
-                         justify-content: center;
-                         align-items: center;
-                         position: fixed;
-                         top: 0;
-                         left: 0;
-                         z-index: 200; }
-
-.preguntanos-container-open { display: flex; }
-
-                         .preguntanos-content { width: 40%;
-                                                background-color: #161A23;
-
-                                                display: flex;
-                                                flex-direction: column;
-                                                justify-content: center;
-                                                align-items: center;
-                                                padding: 20px;
-                                                position: relative;
-                                                border-radius: 15px;
-                                                opacity: 0;
-                                                transition: opacity .2s ease-in-out; }
-
-                         .preguntanos-content-open { opacity: 1; }
-
-                                                .preguntanos-cerrar-container { width: 100%;
-                                                                                padding: 20px;
-                                                                                position: absolute;
-                                                                                top: 0;
-                                                                                left: 0;
-
-                                                                                display: flex;
-                                                                                justify-content: flex-end;
-                                                                                align-items: center; }
-
-                                                                                .preguntanos-cerrar { cursor: pointer;
-                                                                                                      transition: transform .2s ease-in-out; }
-
-                                                                                                      .preguntanos-cerrar:hover { transform: rotate(90deg); }
-
-                                                .preguntanos-img-container { width: 100%;
-                                                                             display: flex;
-                                                                             justify-content: center;
-                                                                             align-items: center; }
-
-                                                                             .preguntanos-img-container img { width: 50%; }
-
-                                                .preguntanos-info-container { width: 100%;
-                                                                              display: flex;
-                                                                              flex-direction: column;
-                                                                              justify-content: center;
-                                                                              align-items: flex-start;
-                                                                              font-size: 20px;
-                                                                              font-family: "Ubuntu",sans-serif; }
-
-                                                                              .preguntanos-info-container span { font-size: 1em;
-                                                                                                                 color: #E33700;
-                                                                                                                 font-weight: bold;
-                                                                                                                 margin-bottom: 10px;
-                                                                                                                 font-family: "Red Hat Display","Ubuntu";
-                                                                                                                 text-align: left; }
-
-                                                                              .preguntanos-info-container p  { font-size: .8em;
-                                                                                                               color: #ccc5;
-                                                                                                               margin-bottom: 20px;
-                                                                                                               text-align: left; }
-
-                                                                              .preguntanos-whatsapp { width: max-content;
-                                                                                                      border: none;
-                                                                                                      outline: none;
-                                                                                                      padding: 10px;
-                                                                                                      border-radius: 10px;
-                                                                                                      background-color: white;
-                                                                                                      color: #E33700;
-                                                                                                      font-family: "Red Hat Display","Ubuntu";
-                                                                                                      font-weight: bold;
-                                                                                                      transition: background-color .2s ease-in-out;
-                                                                                                      cursor: pointer; }
-
-                                                                                                      .preguntanos-whatsapp:hover { background-color: #E33700; 
-                                                                                                                                    color: white; }
-
-
-@media screen and (max-width: 1200px) { .sobre_MC-content { width: 50%; }
-                                        .sobre_cupon-content { width: 50%; }
-                                        .preguntanos-content { width: 50%; } }
-
-@media screen and (max-width: 950px) { .sobre_MC-content,
-                                       .sobre_cupon-content,
-                                       .preguntanos-content { width: 60%; } }
-
-@media screen and (max-width: 750px) { .sobre_MC-content,
-                                       .sobre_cupon-content,
-                                       .preguntanos-content { width: 70%; }
-
-                                       .sobre_MC-info-container span { font-size: .9em; }
-                                       .sobre_MC-info-container p  { font-size: .7em; }
-
-                                       .sobre_cupon-info-container span { font-size: .9em; }
-                                       .sobre_cupon-info-container p { font-size: .7em; }
-
-                                       .preguntanos-info-container span { font-size: .9em; }
-                                       .preguntanos-info-container p { font-size: .7em; } }
-
-@media screen and (max-width: 600px) { .sobre_MC-content,
-                                       .sobre_cupon-content,
-                                       .preguntanos-content { width: 80%; }
-
-                                       .sobre_MC-img-container,
-                                       .sobre_cupon-img-container img,
-                                       .preguntanos-img-container img { width: 60%; } }
-
-@media screen and (max-width: 500px) { .sobre_MC-content,
-                                       .sobre_cupon-content,
-                                       .preguntanos-content { width: 90%; }
-
-                                       .sobre_MC-img-container,
-                                       .sobre_cupon-img-container img,
-                                       .preguntanos-img-container img { width: 70%; } }
-
-
+		                                  .cabecera_content span { font-size: .8em;
+		                                                           color: #E33700;
+		                                                           font-family: 'Raleway', sans-serif;
+		                                                           font-weight: 600; }
 
 
 /*Codigo seccion main*/
 
 .main-container { width: 100%;
-                  height: 100vh;
-
+                  height: 90vh;
                   display: flex;
                   flex-direction: row;
-                  justify-content: center;
-                  align-items: center;
-                  position: relative; }
+                  justify-content: flex-start;
+                  align-items: center; }
 
-                  .main-content-container { width: 50%;
-                                            padding-left: 60px;
+                  .main-content { width: 50%;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: flex-start;
+                                  align-items: center;
+                                  padding-right: 20px;
 
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center; }
+                                  font-size: 20px;
+                                  color: white; }
 
-                                            .main-content { width: 100%;
-                                                            display: flex;
-                                                            flex-direction: column;
-                                                            justify-content: center;
-                                                            align-items: flex-start;
-                                                            font-size: 20px; }
+                                  .main-content h4 { font-size: 1.5em;
+                                                     font-family: "Righteous",sans-serif;
+                                                     font-weight: bold; }
 
-                                                            .main-subtittle  { font-size: 2.5em; 
-                                                                               font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                               color: transparent;
-                                                                               -webkit-text-stroke: 1px white;
-                                                                               margin-bottom: 10px;
-                                                                               font-weight: bold; }
+                                  .main-content span { font-size: 1.2em;
+                                                       font-family: "Raleway",sans-serif;
+                                                       font-weight: bold;
+                                                       margin-top: 20px;
+                                                       color: #86B302; }
 
-                                                            .main-tittle { font-size: 3em;
-                                                                           font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                           color: #E33700;
-                                                                           font-weight: bold;
-                                                                           margin-bottom: 10px; }
+                                  .main-content div { width: 100%;
+                                                      display: flex;
+                                                      flex-direction: row;
+                                                      justify-content: center;
+                                                      align-items: center;
+                                                      margin-top: 20px;
+                                                      font-size: 20px; }
 
-                                                            .main-description { font-size: 1em;
-                                                                                color: white;
-                                                                                font-family: "Ubuntu",sans-serif;
-                                                                                margin-bottom: 25px;
-                                                                                font-weight: bold; }
-
-                                                            .main-buttom-container { width: max-content;
-                                                                                     padding: 20px 40px;
-                                                                                     border-radius: 15px;
-
-                                                                                     display: flex;
-                                                                                     justify-content: center;
-                                                                                     align-items: center;
-                                                                                     font-size: 20px;
-                                                                                     font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                                     background-color: #E33700;
-                                                                                     cursor: pointer; }
-
-                                                                                     .main-buttom-container span { font-size: 1em;
-                                                                                                                   font-weight: bold;
-                                                                                                                   margin-right: 5px;
-                                                                                                                   color: white;
-                                                                                                                   align-content: center;
-                                                                                                                   font-family: "Ubuntu",sans-serif;
-                                                                                                                   transform: translateY(-2px); }
-
-                                                                                     .main-buttom-container img { transition: transform .4s ease-in-out; }
-
-                                                                                     .main-buttom-container:hover { background-color: #E22700; }
-
-                                                                                     .main-buttom-container:hover > .main-buttom-img { transform: translateX(20px) rotateX(180deg); }
-                  
-                  .main-img-container { width: 50%;
-                                        height: 100%;
-                                        position: relative;
-
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        font-size: 20px;
-                                        overflow: hidden; }
-
-                                        .main-img-content { width: 90%;
-                                                            display: flex;
-                                                            flex-direction: column;
-                                                            justify-content: center;
-                                                            align-content: center;
-                                                            overflow: hidden;
-                                                            font-size: 20px;  }
-
-	                                                        .main-img { width: 100%; }
-	                                                                
-                                        .main-img-decoration { width: 100%;
-                                                               height: 100%;
-                                                               position: absolute;
-                                                               top: 0;
-                                                               left: 0;
-                                                               background: #E33700; 
-                                                               background: -webkit-linear-gradient(to right, #ff6a00, #E33700);
-                                                               background: linear-gradient(to right, #ff6a00, #E33700);
-
-                                                               z-index: -1;
-                                                               clip-path: polygon(88% 0, 100% 0, 100% 100%, 9% 100%);
-
-                                                               opacity: 0;
-                                                               transform: translateX(40px);
-                                                               transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
-
-                                                               .main-decoration-view { transform: translateX(0);
-		                                                                               opacity: 1; }
+                                                      .main-content div p { font-size: 1em;
+                                                                            font-family: "Raleway",sans-serif;
+                                                                            margin-right: 5px; }
 
 
+                   .main_video-container { width: 50%;
+                   	                       height: 100%;
+                                           display: flex;
+                                           justify-content: center;
+                                           align-items: center;
+                                           position: relative;
+                                           padding: 20px; }
 
-/*clip-path: polygon(0 0, 0 99%, 88% 100%, 12% 0); izquierda*/
-/* clip-path: polygon(88% 0, 100% 0, 100% 100%, 9% 100%);  derecha*/
+                                           .main_video-container video { width: 100%; }
+
+                                           .main_video-decoration { width: 100%;
+                                                                    height: 100%;
+                                                                    background-color: #86B302;
+                                                                    position: absolute;
+                                                                    z-index: -1;
+                                                                    clip-path: polygon(100% 1%, 0% 100%, 100% 100%); }
 
 
-
-
-
-@media screen and (max-width: 1100px) { .main-container { flex-direction: column;
-                                                          margin-top: 100px;
-                                                          margin-bottom: 40px;
+@media screen and (max-width: 1170px) { .main-container { flex-direction: column;
+                                                          margin-top: 40px;
                                                           height: max-content; }
-
-                                        .main-content-container { width: 100%;
-                                                                  padding: 0; }
-
-                                        .main-content { align-items: center;
-                                                        padding: 20px; }
-                                                        
-                                        .main-content h4, span, p { text-align: center; }
-                                        .main-content p {  width: 50%; }
-
-                                        .main-description { text-align: center !important; }
-
-                                        /*-------------------------------------*/
-
-                                        .main-img-container { width: 100%;
-                                                              height: max-content;
-                                                              padding: 20px;
-                                                              overflow: visible; }
-
-                                        .main-img-decoration { display: none; }
-                                        .main-img { filter: drop-shadow(0 0 10px #E33700); }
-
-                                        .main-img-content { width: 60%;
-                                                            overflow: visible; } }
-
-@media screen and (max-width: 700px) { .main-content h4 { font-size: 2em; }
-                                       .main-img-content { width: 70%; }
-                                       .main-subtittle { font-size: 1.5em !important; }
-                                       .main-description { font-size: .8em; }
-
-                                       .main-buttom-container { padding: 10px 20px; }
-                                       .main-buttom-container span { font-size: .8em; } }
-
-@media screen and (max-width: 600px) { .main-img-content { width: 80%; }
-                                       .main-content p { width: 70%; } }
-
-@media screen and (max-width: 500px) { .main-content-container { padding: 20px 10px; }
-	                                     .main-img-content { width: 90%; }
-
-                                       .main-img-container { overflow: hidden; }
-
-                                       .main-content { width: 100%;
-                                                       padding: 0px; }
-
-                                       .main-content h4, span, p { width: 100% !important; }
-
-                                       .main-img-decoration  { display: flex;
-                                                               clip-path: polygon(100% 0, 50% 100%, 100% 100%); } }
-
-@media screen and  (max-width: 450px) { .main-tittle { font-size: 2.5em; }
-                                        .main-img-content { width: 100%; } }
-
-
-
-/* Codigo seccion Promesa  Inicial*/
-
-.promesa_inicial-container { width: 80%;
-                             height: 80vh;
-                             margin: 20px auto;
-
-                             display: flex;
-                             justify-content: center;
-                             align-items: center;
-                             position: relative;
-                             border-radius: 10px;
-
-                             background-image: url(multimedia/imagenes/promesa_inicial.webp);
-                             background-position: top;
-                             background-size: cover;
-                             background-repeat: no-repeat;
-                             background-attachment: scroll; }
-
-                             .promesa_inicial-content { width: 70%;
-                                                        background-color: rgba(18,22,29,.99);
-                                                        border-radius: 10px;
-                                                        position: relative;
-                                                        z-index: 2;
-
-                                                        display: flex;
-                                                        flex-direction: column;
-                                                        justify-content: center;
-                                                        align-items: flex-start;
-                                                        padding: 40px;
-                                                        font-size: 20px;
-                                                        opacity: 0;
-                                                        transform: translateY(60px);
-                                                        font-family: "Ubuntu",sans-serif;
-                                                        transition: transform 1s ease-out, opacity 1s ease-in-out; }
-
-                                                        .promesa_inicial-content h4 { font-size: 1em;
-                                                                                      color: white;
-                                                                                      font-weight: bold;
-                                                                                      margin-bottom: 10px; }
-
-                                                        .promesa_inicial-content p { font-size: .8em; 
-                                                                                     color: white;
-                                                                                     margin-bottom: 5px; }
-
-                             .promesa_inicial-decoration { width: 50%;
-                                                           height: 100%;
-                                                           position: absolute;
-                                                           top: 0;
-                                                           left: 0;
-                                                           z-index: 1;
-                                                           background: #E33700; 
-                                                           background: -webkit-linear-gradient(to left, #ff6a00, #E33700);
-                                                           background: linear-gradient(to left, #ff6a00, #E33700);
-                                                           clip-path: polygon(0 0, 0 100%, 88% 100%, 0% 0);
-                                                           opacity: 0;
-                                                           transform: translateX(0);
-                                                           transition: opacity 1s ease-in-out;
-                                                           border-radius: 10px;
-                                                           display: none; }
-
-                             .promesa_inicial-efect-view { transform: translateY(0);
-                                                           opacity: 1; }
-
-
-
-@media screen and (max-width: 1000px) { .promesa_inicial-container { width: 100%;
-                                                                     margin: 0px;
-                                                                     height: max-content;
-                                                                     margin-bottom: 10px;
-                                                                     padding: 50px 0px;
-                                                                     border-radius: 0px; } }
-
-                                        .promesa_inicial-decoration { display: none; } }
-
-@media screen and (max-width: 800px) { .promesa_inicial-content p { font-size: .77em;  }
-
-                                       .promesa_inicial-content { padding: 20px; }  }
-
-@media screen and (max-width: 770px) { .promesa_inicial-content { width: 80%; } }
-
-
-
-@media screen and (max-width: 420px) { .promesa_inicial-content { width: 90%; }
-                                       
-                                       .promesa_inicial-container { background-size: auto; } }
-
-
-
-
-/*Codigo seccion problemas 2*/
-
-.problemas2-container { width: 80%;
-                        height: 80vh;
-                        margin: 10px auto;
-                        margin-bottom: 0px;
-  
-                        display: flex;
-                        flex-direction: row-reverse;
-                        justify-content: center;
-                        align-items: center; }
-
-                      .problemas2-img-container { width: 50%;
-                                                  height: 100%; 
-                                                  display: flex;
-                                                  justify-content: center;
-                                                  align-items: center;
-                                                  position: relative;
-                                                  overflow: hidden; }
-
-                                                .problemas2-img-content { width: 100%;
-                                                                          display: flex;
-                                                                          justify-content: center;
-                                                                          align-items: center; }
-
-                                                                         .problemas2-img { width: 60%;
-                                                                                           transform: translateX(-40px);
-                                                                                           opacity: 0;
-                                                                                           transition: transform 1s ease-in-out, opacity 1s ease-out;
-                                                                                           border-radius: 10px; }
-
-                                                                                          .problemas2-img-view { transform: translateX(0);
-                                                                                                                 opacity: 1; }
-
-                                                .problemas2-decoration { width: 100%;
-                                                                         height: 100%;
-
-                                                                         position: absolute;
-                                                                         top: 0;
-                                                                         left: 0;
-                                                                         z-index: -1;
-
-                                                                         background: #E33700; 
-                                                                         background: -webkit-linear-gradient(to right, #ff6a00, #E33700);
-                                                                         background: linear-gradient(to right, #ff6a00, #E33700);
-                                                                         clip-path: polygon(100% 0, 100% 0, 100% 100%, 9% 100%);
-
-                                                                         transform: translateX(40px);
-                                                                         opacity: 0;
-                                                                         transition: transform 1s ease-out, opacity 1s ease-in-out;  }
-  
-                                                                        .problemas2-decoration-view { transform: translateX(0px);
-                                                                                                      opacity: 1; }
-
-                    .problemas2-content { width: 50%;
-                                          display: flex;
-                                          justify-content: center;
-                                          align-items: center; }
-
-                                          .problemas2-info-container { width: 100%;
-                                                                       display: flex;
-                                                                       flex-direction: column;
-                                                                       justify-content: flex-start;
-                                                                       align-items: flex-start;
-                                                                       padding: 20px;
-                                                                       padding-left: 60px;
-
-                                                                       font-size: 20px; }
-
-                                                                       .problemas2-info-container h4 { font-size: 1.5em;
-                                                                                                       font-weight: bold;
-                                                                                                       font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                                                       margin-bottom: 10px;
-                                                                                                       color: #E33700; }
-
-                                                                       .problemas2-info-container p { font-size: .8em;
-                                                                                                      color: white;
-                                                                                                      font-family: "Ubuntu",sans-serif;
-                                                                                                      margin-bottom: 20px;
-                                                                                                      text-align: left; }
-
-
-
-@media screen and  (max-width: 1030px) { .problemas2-info-container h4, p { text-align: left; } }
-
-@media screen and (max-width: 1000px) { .problemas2-container { width: 100%; }
-                                        .problemas2-img { width: 80%; } }
-
-@media screen and (max-width: 800px) { .problemas2-container { width: 80%;
-                                                               height: max-content;
-                                                               flex-direction: column;
-                                                               padding: 20px 0px; }
-
-                                       .problemas2-decoration { display: none; }
-
-                                       .problemas2-img { width: 100%; }
-
-                                       .problemas2-content { width: 80%; }
-
-                                                            .problemas2-info-container { padding: 20px;
-                                                                                         justify-content: center;
-                                                                                         align-items: center; }
-                                                                       
-                                                                                         .problemas2-info-container h4 { font-size: 1em;
-                                                                                                                         text-align: center; }
-
-                                                                                         .problemas2-info-container p { font-size: .7em; } }
-
-@media screen and (max-width: 770px) { .problemas2-container { border: 1px solid #12161D;
-                                                               border-radius: 10px;
-                                                               background-color: #12161D; } }
-
-@media screen and (max-width: 500px) { .problemas2-img-container { width: 80%; } }
-
-@media screen and (max-width: 470px) { .problemas2-content { width: 100%; }
-                                       
-                                       .problemas2-info-container { justify-content: flex-start;
-                                                                    align-items: flex-start; }
-
-                                       .problemas2-info-container h4, p { text-align: left !important; }  }
-
-@media screen and (max-width: 420px) { .problemas2-container { width: 90%; } }
-
-
-
-
-
-
-
-
-
-
-/*Codigo seccion promesa 1*/
-
-.promesa1-container { width: 80%;
-                      height: 80vh;
-                      margin: 10px auto;
-                      margin-bottom: 0;
-
-                      display: flex;
-                      flex-direction: row;
-                      justify-content: center;
-                      align-items: center; }
-
-                      .promesa1-img-container { width: 50%;
-                                                height: 100%;
-                                                display: flex;
-                                                justify-content: center;
-                                                align-items: center;
-                                                position: relative;
-                                                overflow: hidden; }
-
-                                                .promesa1-decoration { width: 100%;
-                                                                       height: 100%;
-                                                                       position: absolute;
-                                                                       top: 0;
-                                                                       left: 0;
-                                                                       z-index: -1;
-                                                                       background: #E33700; 
-                                                                       background: -webkit-linear-gradient(to left, #ff6a00, #E33700);
-                                                                       background: linear-gradient(to left, #ff6a00, #E33700);
-                                                                       clip-path: polygon(0 0, 0 99%, 88% 100%, 0% 0);
-                                                                       opacity: 0;
-                                                                       transform: translateX(-40px);
-                                                                       transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
-
-                                                .promesa1-img-content { width: 100%;
-                                                                        display: flex;
-                                                                        justify-content: center;
-                                                                        align-items: center; }
-
-                                                                        .promesa1-img { width: 50%;
-                                                                                        transform: translateX(30px);
-                                                                                        opacity: 0;
-                                                                                        transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
-
-                                                                        .promesa1-2-img { display: none; }
-
-                                                                        .promesa1-efect-view { transform: translateX(0) !important;
-                                                                                               opacity: 1 !important; }
-
-                      .promesa1-content { width: 50%;
-                                          height: 100%;
-
-                                          display: flex;
-                                          justify-content: center;
-                                          align-items: center; }
-
-                                          .promesa1-info-container { width: 100%;
-                                                                     display: flex;
-                                                                     flex-direction: column;
-                                                                     justify-content: flex-start;
-                                                                     align-items: flex-start;
-                                                                     padding: 20px;
-                                                                     padding-right: 60px;
-                                                                     font-size: 20px; }
-
-                                                                     .promesa1-info-container h4 { font-size: 1.5em;
-                                                                                                   font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                                                   font-weight: bold;
-                                                                                                   margin-bottom: 10px;
-                                                                                                   color: #E33700;
-                                                                                                   text-align: left; }
-
-                                                                     .promesa1-info-container p { font-size: .8em;
-                                                                                                  font-family: "Ubuntu",sans-serif;
-                                                                                                  color: White;
-                                                                                                  text-align: left; }
-
-@media screen and (max-width: 1200px) { .promesa1-img { width: 70%; } }
-
-@media screen and (max-width: 1000px) { .promesa1-container { width: 100%; } }
-
-@media screen and (max-width: 800px) { .promesa1-container { flex-direction: column;
-                                                             height: max-content;
-                                                             padding: 20px 0px;
-                                                             width: 80%; }
-
-                                       .promesa1-img-container,
-                                       .promesa1-content { height: max-content; }
-
-                                       .promesa1-content { width: 80%; }
-
-                                       .promesa1-info-container { justify-content: center;
-                                                                  align-items: center;
-                                                                  padding: 20px;
-                                                                  padding-top: 0px; }
-
-                                                                  .promesa1-info-container h4 { font-size: 1em;
-                                                                                                text-align: center; }
-
-                                                                  .promesa1-info-container p { font-size: .77em; }
-
-	                                   .promesa1-img { display: none; }
-                                     .promesa1-2-img { display: flex;
-                                                       width: 100%;
-                                                       opacity: 0;
-                                                       transform: translateX(40px);
-                                                       transition: transform 1s ease-in-out, opacity 1s ease-in-out; } }
-
-
-@media screen and (max-width: 770px) { .promesa1-container { border: 1px solid #12161D;
-                                                             border-radius: 10px;
-                                                             background-color: #12161D; } }
-
-@media screen and (max-width: 500px) { .promesa1-img-container { width: 80%;
-                                                                 margin-bottom: 10px; } }
-
-
-@media screen and (max-width: 470px) { .promesa1-content { width: 100%; }
-                                       .promesa1-info-container { justify-content: flex-start;
-                                                                  align-items: flex-start; }
-
-                                       .promesa1-info-container h4,
-                                       .promesa1-info-container  p { text-align: left;  }  }
-
-@media screen and (max-width: 420px) { .promesa1-container { width: 90%; } }
-
-/*Codigo seccion promesa 2*/
-
-.promesa2-container { width: 80%;
-                      height: 80vh;
-                      margin: 10px auto;
-                      margin-bottom: 0px;
-
-                      display: flex;
-                      flex-direction: row-reverse;
-                      justify-content: center;
-                      align-items: center; }
-
-                      .promesa2-img-container { width: 50%;
-                                                height: 100%; 
-                                                display: flex;
-                                                justify-content: center;
-                                                align-items: center;
-                                                position: relative;
-                                                overflow: hidden; }
-
-                                                .promesa2-img-content { width: 100%;
-                                                                        display: flex;
-                                                                        justify-content: center;
-                                                                        align-items: center; }
-
-                                                                       .promesa2-img { width: 60%;
-                                                                                       transform: translateX(-40px);
-                                                                                       opacity: 0;
-                                                                                       transition: transform 1s ease-in-out, opacity 1s ease-out;
-                                                                                       border-radius: 10px; }
-
-                                                                                       .promesa2-img-view { transform: translateX(0);
-                                                                                                            opacity: 1; }
-
-                                                .promesa2-decoration { width: 100%;
-                                                                       height: 100%;
-
-                                                                       position: absolute;
-                                                                       top: 0;
-                                                                       left: 0;
-                                                                       z-index: -1;
-
-                                                                       background: #E33700; 
-                                                                       background: -webkit-linear-gradient(to right, #ff6a00, #E33700);
-                                                                       background: linear-gradient(to right, #ff6a00, #E33700);
-                                                                       clip-path: polygon(100% 0, 100% 0, 100% 100%, 9% 100%);
-
-                                                                       transform: translateX(40px);
-                                                                       opacity: 0;
-                                                                       transition: transform 1s ease-out, opacity 1s ease-in-out;  }
-
-                                                                       .promesa2-decoration-view { transform: translateX(0px);
-                                                                                                   opacity: 1; }
-
-                    .promesa2-content { width: 50%;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center; }
-
-                                        .promesa2-info-container { width: 100%;
-                                                                   display: flex;
-                                                                   flex-direction: column;
-                                                                   justify-content: flex-start;
-                                                                   align-items: flex-start;
-                                                                   padding: 20px;
-                                                                   padding-left: 60px;
-
-                                                                   font-size: 20px; }
-
-                                                                   .promesa2-info-container h4 { font-size: 1.5em;
-                                                                                                 font-weight: bold;
-                                                                                                 font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                                                 margin-bottom: 10px;
-                                                                                                 color: #E33700; }
-
-                                                                   .promesa2-info-container ul { width: 100%;
-                                                                                                 padding: 0px 20px;
-                                                                                                 font-size: 20px;
-                                                                                                 font-family: "Ubuntu",sans-serif;
-
-                                                                                                 display: flex;
-                                                                                                 flex-direction: column;
-                                                                                                 justify-content: flex-start;
-                                                                                                 align-items: flex-start; }
-
-                                                                                                 .promesa2-info-container ul li { font-size: .8em;
-                                                                                                                                  color: white;
-                                                                                                                                  margin-bottom: 10px;
-                                                                                                                                  list-style-type: initial !important; }
-
-
-@media screen and  (max-width: 1030px) { .promesa-info-container h4, p { text-align: left; } }
-
-@media screen and (max-width: 1000px) { .promesa2-container { width: 100%; } }
-
-@media screen and (max-width: 800px) { .promesa2-container { width: 80%;
-                                                             height: max-content;
-                                                             flex-direction: column;
-                                                             padding: 20px 0px; }
-
-                                       .promesa2-decoration { display: none; }
-
-                                       .promesa2-img { width: 100%; }
-
-                                       .promesa2-content { width: 80%; }
-
-                                                          .promesa2-info-container { padding: 20px;
-                                                                                     justify-content: center;
-                                                                                     align-items: center; }
-                                                         							 
-                                                         							 .promesa2-info-container h4 { font-size: 1em;
-                                                         							                               text-align: center; }
-
-                                                         							 .promesa2-info-container p { font-size: .7em; } }
-
-@media screen and (max-width: 770px) { .promesa2-container { border: 1px solid #12161D;
-                                                             border-radius: 10px;
-                                                             background-color: #12161D; } }
-
-@media screen and (max-width: 500px) { .promesa2-img-container { width: 80%; } }
-
-@media screen and (max-width: 470px) { .promesa2-content { width: 100%; }
-                                       
-                                       .promesa2-info-container { justify-content: flex-start;
-                                                                  align-items: flex-start; }
-
-                                       .promesa2-info-container h4, p { text-align: left !important; }  }
-
-@media screen and (max-width: 420px) { .promesa2-container { width: 90%; } }
-
-
-
-
-/*Codigo seccion info 1*/
-
-.info1-container { width: 80%;
-                   height: max-content;
-                   margin: 20px auto;
-
-                   display: flex;
-                   justify-content: center;
-                   align-items: center;
-                   background-color: #12161D;
-                   border-radius: 15px;
-                   padding: 20px; }
-
-                   .info1-content { width: 50%;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: flex-start;
-                                    align-items: flex-start;
-                                    font-size: 20px;
-                                    font-family: "Ubuntu",sans-serif;
-                                    padding: 20px; }
-
-                                    .info1-content h4 { font-size: 1.5em;
-                                                        color: #E33700;
-                                                        font-weight: bold;
-                                                        font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                        margin-bottom: 10px; }
-
-                                    .info1-content p { font-size: .8em;
-                                                       color: #ccc;
-                                                       margin-bottom: 20px; }
-
-                                    .info1-lista-container { width: 100%;
-                                                             display: flex;
-                                                             flex-direction: column;
-                                                             justify-content: flex-start;
-                                                             align-items: flex-start;
-                                                             font-size: 20px;
-                                                             font-family: "Ubuntu",sans-serif;
-                                                             padding: 10px; }
-
-                                                             .info1-lista-container li { font-size: .8em;
-                                                                                         color: #ccc;
-                                                                                         margin-bottom: 10px;
-                                                                                         list-style-type: initial !important; }
-
-                  .info1-img-container { width: 50%;
-                                         display: flex;
-                                         justify-content: center;
-                                         align-items: center; }
-
-                                         .info1-img { width: 100%;
-                                                      border-radius: 15px; }
-
-@media screen and (max-width: 1200px) { .info1-container { width: 90%; } }
-
-@media screen and  (max-width: 950px) { .info1-container { width: 100%;
-                                                           margin: 20px 0px;
-                                                           border-radius: 0px; } }
-
-@media screen and (max-width: 920px) { .info1-container { flex-direction: column-reverse; }
-                                       
-                                       .info1-img-container,
-                                       .info1-content { width: 80%; }
-
-                                       .info1-img { border-radius: 10px; } }
-
-@media screen and (max-width: 620px) { .info1-content h4 { font-size: 1.2em; } }
-
-@media screen and (max-width: 770px) { .info1-img-container, .info1-content { width: 85%; } }
-
-@media screen and (max-width: 540px) { .info1-img-container, .info1-content { width: 100%; }
-                                       .info1-lista-container { padding: 20px; }
-                                       .info1-content { padding: 20px 0px; }
-
-                                       .info1-img { border-radius: 10px; } }
-
-
-
-/* codigo seccion info 2*/
-
-.info2-container { width: 80%;
-                   height: max-content;
-                   margin: 20px auto;
-
-                   display: flex;
-                   flex-direction: row-reverse;
-                   justify-content:center;
-                   align-items: center;
-
-                   border-radius: 15px;
-                   background-color: #12161D;
-                   padding: 20px; }
-
-                   .info2-img-container { width: 50%;
-
-                                          display: flex;
-                                          justify-content: center;
-                                          align-items: center; }
-
-                                          .info2-img { width: 100%;
-                                                       border-radius: 15px; }
-
-                   .info2-content { width: 50%;
-
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: flex-start;
-                                    align-items: flex-start;
-
-                                    font-size: 20px;
-                                    font-family: "Ubuntu",sans-serif;
-                                    padding: 20px; }
-
-                                    .info2-content h4 { font-size: 1.5em;
-                                                        color: #E33700;
-                                                        font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                        margin-bottom: 10px;
-                                                        font-weight: bold; }
-                                   
-                                    .info2-content p { font-size: .8em;
-                                                       color: #ccc;
-                                                       margin-bottom: 20px; }
-
-                                    .info2-content ul { width: 100%;
-                                                        font-size: 20px;
-                                                        font-family: "Ubuntu",sans-serif;
-
-                                                        display: flex;
-                                                        flex-direction: column;
-                                                        justify-content: flex-start;
-                                                        align-items: flex-start; }
-
-                                                        .info2-content ul span { font-size: 1em;
-                                                                                 color: #E33700;
-                                                                                 font-weight: bold;
-                                                                                 margin-bottom: 10px; }
-
-                                                        .info2-module-tittle { text-align: left !important; }
-
-                                                        .info2-content ul li { font-size: .8em;
-                                                                               color: #ccc;
-                                                                               margin-bottom: 5px;
-                                                                               margin-left: 40px; }
-
-@media screen and (max-width: 1200px) { .info2-container { width: 90%; } }
-
-@media screen and (max-width: 1130px) { .info2-content ul li { margin-left: 0px; } }
-
-@media screen and (max-width: 1000px) { .info2-container { width: 100%;
-                                                           border-radius: 0px;
-                                                           margin: 20px 0px; } }
-
-@media screen and (max-width: 920px) { .info2-container { flex-direction: column; }
-                                       
-                                       .info2-img-container,
-                                       .info2-content { width: 80%; }
-
-                                       .info2-img { border-radius: 10px; } }
-
-@media screen and (max-width: 620px) { .info2-content h4 { font-size: 1.2em; } }
-
-@media screen and (max-width: 770px) { .info2-img-container, .info2-content { width: 85%; } }
-
-@media screen and (max-width: 540px) { .info2-img-container, .info2-content { width: 100%; }
                                         
-                                       .info2-content { padding: 20px 0px; }
+                                        .main-content,
+                                        .main_video-container { width: 100%;
+                                                                padding: 10px; }
+                                         
+                                        .main-content div { flex-direction: column; }
+                                        .main-content div p { margin-right: 0px;
+                                                              margin-bottom: 5px; }
+                                        .main-content div img { transform: rotate(90deg); } }
 
-                                       .info2-content ul { margin-bottom: 10px; }
 
-                                       .info2-content ul span { font-size: .9em; } }
 
 
-/*Codigo seccion promesa 3*/
 
 
-.promesa3-container { width: 80%;
-                      height: 80vh;
-                      margin: 10px auto;
-                      margin-bottom: 0px;
 
-                      display: flex;
-                      flex-direction: row;
-                      justify-content: center;
-                      align-items: center; }
 
-                      .promesa3-img-container { width: 50%;
-                                                height: 100%;
 
-                                                display: flex;
-                                                justify-content: center;
-                                                align-items: center;
-                                                position: relative;
-                                                overflow: hidden; }
 
-                                                .promesa3-img { width: 90%;
-                                                                transform: translateX(40px);
-                                                                opacity: 0;
-                                                                transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
 
-                                                .promesa3-decoration { width: 100%;
-                                                                       height: 100%;
 
-                                                                       position: absolute;
-                                                                       top: 0;
-                                                                       left: 0;
-                                                                       z-index: -1;
-                                                                       background: #E33700; 
-                                                                       background: -webkit-linear-gradient(to left, #ff6a00, #E33700);
-                                                                       background: linear-gradient(to left, #ff6a00, #E33700);
-                                                                       clip-path: polygon(0 0, 0 99%, 88% 100%, 0% 0);
-                                                                       opacity: 0;
-                                                                       transform: translateX(-40px);
-                                                                       transition: transform 1s ease-in-out, opacity 1s ease-in-out;  }
 
-                                                                       .promesa3-efect-view  { transform: translateX(0);
-                                                                                               opacity: 1; }
 
-                      .promesa3-content { width: 50%;
-                                          height: 100%;
 
-                                          display: flex;
-                                          justify-content: center;
-                                          align-items: center; }
 
-                                          .promesa3-info-container { width: 100%;
-                                                                     padding:20px;
-                                                                     padding-right: 60px;
 
-                                                                     display: flex;
-                                                                     flex-direction: column;
-                                                                     justify-content: flex-start;
-                                                                     align-items: flex-start;
-                                                                     font-size: 20px; }
 
-                                                                     .promesa3-info-container h4 { font-size: 1.5em;
-                                                                                                   color: #E33700;
-                                                                                                   font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                                                   margin-bottom: 10px;
-                                                                                                   text-align: left;
-                                                                                                   font-weight: bold; }
 
-                                                                     .promesa3-info-container p  { font-size: .8em;
-                                                                                                   color: white;
-                                                                                                   font-family: "Ubuntu",sans-serif;
-                                                                                                   text-align: left; }
 
-@media screen and (max-width: 1000px) { .promesa3-container {width: 100%;} }
 
-@media screen and (max-width: 800px) { .promesa3-container { width: 80%;
-                                                             flex-direction: column;
-                                                             padding: 20px 0px;
-                                                             height: max-content; }
 
-                                       .promesa3-decoration { display: none; }
 
-                                       .promesa3-img-container { width: 70%; }
 
-                                                                .promesa3-img { width: 100%;  } 
 
-                                       .promesa3-content { width: 80%; } 
 
-                                                           .promesa3-info-container { justify-content: center;
-                                                                                      align-items: center;
-                                                                                      padding: 20px !important;
-                                                                                      font-size: 20px; }
 
-                                                                                      .promesa3-info-container h4 { font-size: 1em;
-                                                                                                                    text-align: center; }
 
-                                                                                      .promesa3-info-container p { font-style: .77em; } } 
 
-@media screen and (max-width: 770px) { .promesa3-container { border-radius: 10px;
-                                                             background-color: #12161D; } }
 
-@media screen and (max-width: 500px) { .promesa3-img-container { width: 100%; } }
-
-@media screen and (max-width: 470px) { .promesa3-content { width: 100%; }
-                                       
-                                       .promesa3-info-container { justify-content: flex-start;
-                                                                  align-items: flex-start; }
-
-                                       .promesa3-info-container h4, p { text-align: left !important; }  }
-
-@media screen and (max-width: 420px) { .promesa3-container { width: 90%; } }
-
-
-
-
-
-
-
-/*Codigo seccion promesa 4*/
-
-.promesa4-container { width: 80%;
-                      height: 80vh;
-                      margin: 10px auto;
-                      margin-bottom: 0px;
-
-                      display: flex;
-                      flex-direction: row-reverse;
-                      justify-content: center;
-                      align-items: center; }
-
-                      .promesa4-img-container { width: 50%;
-                      	                        height: 100%;
-                      	                        display: flex;
-                                                justify-content: center;
-                                                align-items: center;
-                                                position: relative;
-                                                overflow: hidden; }
-
-                                                .promesa4-img { width: 80%;
-                                                                transform: translateX(-40px);
-                                                                opacity: 0;
-                                                                transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
-
-                                                .promesa4-decoration { width: 100%;
-                                                                       height: 100%;
-
-                                                                       position: absolute;
-                                                                       top: 0;
-                                                                       left: 0;
-                                                                       z-index: -1;
-                                                                       background: #E33700; 
-                                                                       background: -webkit-linear-gradient(to right, #ff6a00, #E33700);
-                                                                       background: linear-gradient(to right, #ff6a00, #E33700);
-                                                                       clip-path: polygon(100% 0, 100% 0, 100% 100%, 9% 100%);
-                                                                       opacity: 0;
-                                                                       transform: translateX(40px);
-                                                                       transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
-
-                                                .promesa4-view { transform: translateX(0);
-                                                                                 opacity: 1; }
-
-                      .promesa4-content { width: 50%;
-                                          height: 100%;
-
-                                          display: flex;
-                                          justify-content: center;
-                                          align-items: center;  }
-
-                                          .promesa4-info-container { width: 100%;
-                                                                     display: flex;
-                                                                     flex-direction: column;
-                                                                     justify-content: flex-start;
-                                                                     align-items: flex-start;
-                                                                     padding: 20px;
-                                                                     padding-left: 60px;
-                                                                     font-size: 20px; }
-
-                                                                     .promesa4-info-container h4 { font-size: 1.5em;
-                                                                                                   font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                                                   font-weight: bold;
-                                                                                                   color: #E33700;
-                                                                                                   margin-bottom: 10px;
-                                                                                                   text-align: left; }
-
-                                                                     .promesa4-info-container p { font-size: .8em;
-                                                                                                  color: white;
-                                                                                                  font-family: "Ubuntu",sans-serif;
-                                                                                                  margin-bottom: 15px; }
-
-
-                                                                     .promesa4-button { width: max-content;
-                                                                                        padding: 8px 15px;
-                                                                                        background-color: #E33700;
-                                                                                        border: none;
-                                                                                        outline: none;
-                                                                                        border-radius: 10px;
-                                                                                        color: white;
-
-                                                                                        font-size: .8em;
-                                                                                        font-family: "Ubuntu",sans-serif;
-                                                                                        font-weight: bold;
-                                                                                        cursor: pointer;
-                                                                                        transition: background-color .2s ease-in-out; }
-
-                                                                                        .promesa4-button:hover { background-color: #E22700; }
-
-
-@media screen and (max-width: 1000px) { .promesa4-container { width: 100%; } }
-
-@media screen and (max-width: 800px) { .promesa4-container { width: 80%;
-                                                             flex-direction: column;
-                                                             height: max-content;
-                                                             padding: 20px 0px; }
-
-                                       .promesa4-decoration { display: none; }
-
-                                       .promesa4-img { width: 100%; }
-                                       .promesa4-content { width: 80%; }
-
-                                       .promesa4-info-container { justify-content: center;
-                                                                  align-items: center;
-                                                                  padding: 20px; }
-
-                                                                  .promesa4-info-container h4 { text-align: center !important;
-                                                                                                font-size: 1em; }
-
-                                                                  .promesa4-info-container p {  font-size: .77em; } }
-
-@media screen and (max-width: 770px) { .promesa4-container { border: 1px solid #12161D;
-                                                             border-radius: 10px;
-                                                             background-color: #12161D; } }
-
-@media screen and (max-width: 500px) { .promesa4-img-container { width: 80%;  } }
-
-@media screen and (max-width: 470px) { .promesa4-content { width: 100%; }
-                                       
-                                       .promesa4-info-container { justify-content: flex-start;
-                                                                  align-items: flex-start; }
-
-                                                                  .promesa4-info-container h4 { text-align: left !important; }
-
-                                                                  .promesa4-info-container p { text-align: left !important; } }
-
-@media screen and (max-width: 420px) { .promesa4-container { width: 90%; } }
-
-
-
-
-/*Codigo seccion promesa 5*/
-
-.promesa5-container { width:  80%;
-                      height: 80vh;
-                      margin: 10px auto;
-                      margin-bottom: 0px;
-
-                      display: flex;
-                      flex-direction: row;
-                      justify-content: center;
-                      align-items: center; }
-
-                      .promesa5-img-container  { width: 50%;
-                                                 height: 100%;
-                                                 display: flex;
-                                                 justify-content: center;
-                                                 align-items: center;
-                                                 position: relative;
-                                                 overflow: hidden; }
-
-                                                 .promesa5-img { width: 80%;
-                                                                 opacity: 0;
-                                                                 transform: translateX(40px);
-                                                                 transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
-
-                                                 .promesa5-decoration { width: 100%;
-                                                                        height: 100%;
-
-                                                                        position: absolute;
-                                                                        top: 0;
-                                                                        left: 0;
-                                                                        z-index: -1;
-                                                                        background: #E33700; 
-                                                                        background: -webkit-linear-gradient(to left, #ff6a00, #E33700);
-                                                                        background: linear-gradient(to left, #ff6a00, #E33700);
-                                                                        clip-path: polygon(0 0, 0 99%, 88% 100%, 0% 0);
-
-                                                                        opacity: 0;
-                                                                        transform: translateX(-40px);
-                                                                        transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
-
-                                                  .promesa5-efect-view { transform: translateX(0);
-                                                                         opacity: 1; }
-
-                      .promesa5-content { width: 50%;
-                                          display: flex;
-                                          justify-content: center;
-                                          align-items: center; }
-
-                                          .promesa5-info-container { width: 100%;
-                                                                     display: flex;
-                                                                     flex-direction: column;
-                                                                     justify-content: flex-start;
-                                                                     align-items: flex-start;
-                                                                     padding: 20px;
-                                                                     padding-right: 60px;
-                                                                     font-size: 20px; }
-
-                                                                     .promesa5-tittle-dinamico  { width: 100%;
-                                                                                                  display: flex;
-                                                                                                  justify-content: flex-start;
-                                                                                                  align-items: flex-start;
-                                                                                                  margin-bottom: 10px;
-                                                                                                  font-size: 1.5em;
-                                                                                                  color: #E33700;
-                                                                                                  font-weight: bold;
-                                                                                                  font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                                                  text-align: left; }
-
-                                                                     .promesa5-info-container p { font-size: .8em;
-                                                                                                  color: white;
-                                                                                                  margin-bottom: 20px;
-                                                                                                  font-family: "Ubuntu",sans-serif;
-                                                                                                  text-align: left; }
-
-                                                                     .promesa5-info-container button { font-size: .8em;
-                                                                                                       color: white;
-                                                                                                       font-family: "Ubuntu",sans-serif;
-                                                                                                       font-weight: bold;
-                                                                                                       outline: none;
-                                                                                                       border: none;
-                                                                                                       border-radius: 15px;
-                                                                                                       padding: 8px 15px;
-                                                                                                       width: max-content;
-                                                                                                       margin-bottom: 10px;
-                                                                                                       transition: background-color .2s ease-in-out;
-                                                                                                       background-color: #E33700;
-                                                                                                       cursor: pointer; }
-
-                                                                                                       .promesa5-info-container button:hover { background-color: #E22700; }
-
-
-@media screen and (max-width: 1000px) { .promesa5-container { width: 100%; } }
-
-@media screen and (max-width: 800px)  { .promesa5-container { width: 80%;
-                                                              height: max-content;
-                                                              padding: 20px 0px;
-                                                              flex-direction: column; }
-
-                                        .promesa5-decoration { display: none; }
-
-                                        .promesa5-img { width: 100%; }
-
-                                        .promesa5-content { width: 80%; }
-
-                                                           .promesa5-info-container { justify-content: center; 
-                                                                                      align-items: center;
-                                                                                      padding: 20px; }
-
-                                                                                      .promesa5-info-container div { font-size: 1em;
-                                                                                                                     display: flex;
-                                                                                                                     justify-content: center;
-                                                                                                                     align-items: center; }
-
-                                                                                      .promesa5-info-container p { font-size: .77em; }
-
-                                                                                      .promesa5-info-container button { align-self: flex-start; } }
-
-@media screen and (max-width: 770px) { .promesa5-container { background-color: #12161D;
-                                                             border-radius: 15px; } }
-
-@media screen and (max-width: 500px) { .promesa5-img-container { width: 80%; } }
-
-@media screen and (max-width: 470px) { .promesa5-content { width: 100%; }
-                                                        
-                                                          .promesa5-info-container { justify-content: flex-start;
-                                                                                     align-items: flex-start; }
-
-                                                                                     .promesa5-info-container div { justify-content: flex-start;
-                                                                                                                    align-items: flex-start; } }
-
-@media screen and (max-width: 420px)  { .promesa5-container { width: 90%; }
-                                        .promesa5-img-container { width: 90%; } }
-
-
-
-/* Codigo seccion modal de verificando cupon de descuento*/
-
-.generar_cupon-container { width: 100%;
-                           height: 100vh;
-                           background-color: #0008;
-
-                           display: none;
-                           justify-content: center;
-                           align-items: center;
-                           position: fixed;
-                           top: 0;
-                           left: 0;
-                           z-index: 200; }
-
-.generar_cupon-container-open { display: flex; }
-
-                           .generar_cupon-content { width: 30%;
-                                                    height: 300px;
-                                                    max-height: 400px;
-                                                    background-color: #161A23;
-
-                                                    display: flex;
-                                                    justify-content: center;
-                                                    align-items: center;
-                                                    padding: 20px;
-                                                    border-radius: 15px;
-                                                    position: absolute;
-                                                    transform: scale(.9);
-                                                    opacity: 0;
-                                                    transition: transform .2s linear, opacity .2s linear;  }
-
-                            .generar_cupon-content-open { transform: scale(1);
-                                                          opacity: 1; }
-
-                                                    /* A reemplazar con javascript*/
-                                                    .generar_cupon-replace { width: 100%;
-                                                                             height: 100%;
-
-                                                                             display: flex;
-                                                                             flex-direction: column;
-                                                                             justify-content: center;
-                                                                             align-items: center;
-                                                                             font-size: 20px;
-                                                                             font-family: "Ubuntu",sans-serif; }
-
-                                                                             .generar_cupon-replace h4 { font-size: .9em;
-                                                                                                         color: #E33700;
-                                                                                                         font-weight: bold;
-                                                                                                         margin-bottom: 10px; }
-
-                                                                             .generar_cupon-replace p { font-size: .7em;
-                                                                                                        color: white;
-                                                                                                        margin-bottom: 20px;
-                                                                                                        align-self: center;
-                                                                                                        text-align: center !important; }
-
-                                                                             .generar_cupon-replace img { animation-name: move_generar_cupon_img;
-                                                                                                          animation-duration: 1s;
-                                                                                                          animation-timing-function: ease-in-out;
-                                                                                                          animation-iteration-count: infinite;
-                                                                                                          animation-direction: inherit;  }
-                                                    
-                                                    /* Remplazo para Generar_cupon-replace con javascript*/
-                                                    .generar_cupon-replace1 { width: 100%;
-                                                                              height: 100%;
-
-                                                                              display: flex;
-                                                                              flex-direction: column;
-                                                                              justify-content: center;
-                                                                              align-items: center;
-                                                                              font-size: 20px;
-                                                                              font-family: "Ubuntu",sans-serif; }
-
-                                                                              .generar_cupon-replace1 h4 { font-size: .9em;
-                                                                                                           color: #E33700;
-                                                                                                           margin-bottom: 10px;
-                                                                                                           font-weight: bold; }
-
-                                                                              .generar_cupon-replace1 p { font-size: .7em;
-                                                                                                          color: white;
-                                                                                                          margin-bottom: 20px; }
-
-                                                                              .generar_cupon-replace1 span { font-size: 1em;
-                                                                                                             color: #E33700;
-                                                                                                             font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                                                             margin-bottom: 20px; }
-
-                                                                              .generar_cupon-replace1 button { font-size: .8em;
-                                                                                                               color: white;
-                                                                                                               background-color: #E33700;
-                                                                                                               border-radius: 15px;
-                                                                                                               padding: 8px 15px;
-                                                                                                               width: max-content;
-                                                                                                               font-weight: bold;
-                                                                                                               cursor: pointer;
-                                                                                                               transition: background-color .2s ease-in-out;
-                                                                                                               outline: none;
-                                                                                                               border: none; }
-
-                                                                                                               .generar_cupon-replace1 button:hover { background-color: #E22700; }
-                                                    
-                                                    /* Reemplazo para ".Generar_cupon-replace1" con javascript*/
-                                                    .generar_cupon-replace2 { width: 100%;
-                                                                              height: 100%;
-
-                                                                              display: flex;
-                                                                              flex-direction: column;
-                                                                              justify-content: flex-start;
-                                                                              align-items: flex-start;
-                                                                              font-size: 20px;
-                                                                              font-family: "Ubuntu",sans-serif; }
-
-                                                                              .generar_cupon-replace2 h4 { font-size: .9em;
-                                                                                                           color: #E33700;
-                                                                                                           font-weight: bold;
-                                                                                                           margin-bottom: 10px;
-                                                                                                           align-self: center; }
-
-                                                                              .generar_cupon-replace2 span { font-size: 1.5em;
-                                                                                                             color: #E33700;
-                                                                                                             font-weight: bold;
-                                                                                                             font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                                                             margin-bottom: 20px;
-                                                                                                             align-self: center; }
-
-                                                                              .generar_cupon-replace2 p { font-size: .8em;
-                                                                                                          color: white;
-                                                                                                          margin-bottom: 20px; }
-
-                                                                              .generar_cupon-replace2 button { font-size: .8em;
-                                                                                                               color: white;
-                                                                                                               background-color: #E33700;
-                                                                                                               border-radius: 15px;
-                                                                                                               padding: 8px 15px;
-                                                                                                               width: max-content;
-                                                                                                               cursor: pointer;
-                                                                                                               outline: none;
-                                                                                                               border: none;
-                                                                                                               margin-bottom: 10px;
-                                                                                                               transition: background-color .2s ease-in-out; }
-
-                                                                                                               .generar_cupon-replace2 button:hover { background-color: #E22700; }
-
-@keyframes move_generar_cupon_img { from { transform: rotate(0deg); }
-                                     to { transform: rotate(180deg); } }
-
-
-@media screen and (max-width: 1230px) { .generar_cupon-content { width: 40%; } }
-@media screen and (max-width: 1000px) { .generar_cupon-content { width: 50%; } }
-@media screen and (max-width: 800px) { .generar_cupon-content { width: 60%; } }
-@media screen and (max-width: 650px) { .generar_cupon-content { width: 70%; } }
-@media screen and (max-width: 560px) { .generar_cupon-content { width: 80%; } }
-@media screen and (max-width: 500px) { .generar_cupon-content { width: 95%; } }
-
-
-
-/*Codigo seccion Modal como usar cupon de descuento*/
-
-.como_usar-container { width: 100%;
-                       height: 100vh;
-                       background-color: #0008;
-
-                       display: none;
-                       justify-content: center;
-                       align-items: center;
-
-                       position: fixed;
-                       top: 0;
-                       left: 0;
-                       z-index: 200; }
-
-.como_usar-container-open { display: flex; }
-
-                       .como_usar-content { width: 40%;
-
-                                            display:flex;
-                                            flex-direction: column;
-                                            justify-content: center;
-                                            align-items: center;
-                                            padding: 20px;
-                                            background-color: #161A23;
-                                            border-radius: 15px;
-                                            position: relative;
-
-                                            opacity: 0;
-                                            transform: scale(.9);
-                                            transition: transform .2s linear, opacity .2s ease-out; }
-
-                       .como_usar-content-open { transform: scale(1);
-                                                 opacity: 1; }
-
-                                            .como_usar-cerrar-container { width: 100%;
-                                                                          position: absolute;
-                                                                          top: 0;
-                                                                          left: 0;
-                                                                          padding: 20px;
-                                                                          display: flex;
-                                                                          justify-content: flex-end;
-                                                                          align-items: flex-end; }
-
-                                                                          .como_usar-cerrar { cursor: pointer;
-                                                                                              transition: transform .2s ease-in-out; }
-
-                                                                                              .como_usar-cerrar:hover { transform: rotate(90deg); }
-
-                                            .como_usar-video-container { width: 100%;
-                                                                         margin-top: 40px;
-
-                                                                         display: flex;
-                                                                         justify-content: center;
-                                                                         align-items: center; }
-
-                                                                         .como_usar-video { width: 100%; }
-
-                                            .como_usar-button-container { width: 100%;
-                                                                          padding: 20px 0px;
-                                                                          font-size: 20px;
-                                                                          font-family: "Ubuntu",sans-serif; }
-
-                                                                          .como_usar-comprar { font-size: .8em;
-                                                                                               color: white;
-                                                                                               padding: 8px 15px;
-                                                                                               border-radius: 15px;
-                                                                                               background-color: #E33700;
-                                                                                               width: max-content;
-                                                                                               cursor: pointer;
-                                                                                               border: none;
-                                                                                               outline: none;
-                                                                                               transition: background-color .2s linear; }
-
-                                                                                               .como_usar-comprar:hover { background-color: #E22700; }
-
-
-@media screen and (max-width: 1130px) { .como_usar-content { width: 50%; } }
-@media screen and (max-width: 950px) { .como_usar-content { width: 60%; } }
-@media screen and (max-width: 730px) { .como_usar-content { width: 70%; } }
-@media screen and (max-width: 600px) { .como_usar-content { width: 80%; } }
-@media screen and (max-width: 500px) { .como_usar-content { width: 90%; } }
-@media screen and (max-width: 450px) { .como_usar-content { width: 95%; } }
-
-
-
-
-
-/* Codigo seccion tiempo limitado del descuento*/
-
-.tiempo-container { width: 60%;
-                    height: max-content;
-                    margin: 20px auto;
-
-                    background-color: #12161D;
-
-                    padding: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 15px; }
-
-                    .tiempo-tittle-container { width: 100%;
-                                               font-size: 20px;
-                                               font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                               display: flex;
-                                               justify-content: center;
-                                               align-items: center;
-                                               margin-bottom: 20px; }
-
-                                               .tiempo-tittle-container img { margin-right: 5px; }
-
-                                               .tiempo-tittle-container h4 { font-size: 1em;
-                                                                             color: white;
-                                                                             font-weight: bold;
-                                                                             text-align: center; }
-
-                    .tiempo-content { width: 100%;
-                                      display: flex;
-                                      flex-direction: row;
-                                      justify-content: center;
-                                      align-items: center; }
-
-                                      .tiempo-content div { width: max-content;
-                                                            padding: 30px;
-                                                            font-size: 20px;
-                                                            font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                            color: white;
-                                                            border-radius: 15px;
-                                                            border: 2px solid white;
-                                                            margin: 10px;
-                                                            overflow: hidden;
-                                                            position: relative;
-                                                            display: flex;
-                                                            justify-content: center;
-                                                            align-items: center; }
-
-                                                            .tiempo-content div span { font-size: 1em;
-                                                                                       position: absolute; }
-
-
-@media screen and (max-width: 1220px) { .tiempo-container { width: 70%; } }
-@media screen and (max-width: 1000px) { .tiempo-container { width: 80%; } }
-
-@media screen and (max-width: 500px) { .tiempo-content div span { font-size: 1em; }
-                                       .tiempo-tittle-container h4 { font-size: .8em; } }
-@media screen and (max-width: 420px)  { .tiempo-container { width: 90%; } }
-
-
-
-
-
-
-
-/*Codigo seccion accesos del curso*/
-
-.accesos-container { width: 100%;
-                     
-                     display: flex;
-                     flex-direction: column;
-                     justify-content: center;
-                     align-items: center;
-                     padding: 20px;
-                     margin-top: 20px; }
-
-                    .accesos-tittle-container { width: 60%;
-                                                display: flex;
-                                                flex-direction: column;
-                                                justify-content: center;
-                                                align-items: center;
-                                                font-size: 20px;
-                                                font-family: "Ubuntu",sans-serif;
-                                                margin-bottom: 25px; }
-
-                                                 .accesos-tittle { font-size: 1.5em;
-                                                                   color: #E33700;
-                                                                   font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                                   font-weight: bold; }
-
-                                                 .accesos-tittle-container p { font-size: .7em;
-                                                                               color: #ccc5;
-                                                                               margin-top: 10px;
-                                                                               font-family: "Ubuntu",sans-serif;
-                                                                               display: none;
-                                                                               text-align: center; } 
-
-                    .accesos-content { width: 60%;
-
-                                       display: grid;
-                                       grid-template-columns: repeat(3,1fr);
-                                       grid-template-rows: repeat(2,minmax(250px,300px));
-                                       grid-auto-flow: dense;
-                                       grid-gap: 20px; }
-
-                                       .accesos-targetas { border-radius: 10px;
-                                                           background-color: #12161D;
-                                                           overflow: hidden;
-                                                           position: relative;
-                                                           width: 100%;
-                                                           height: 100%;
-
-                                                           display: flex;
-                                                           flex-direction: column;
-                                                           justify-content: center;
-                                                           align-items: center;
-                                                           font-size: 20px;
-                                                           cursor: pointer;
-                                                           opacity: 0;
-                                                           transform: translateY(-40px);
-
-                                                           animation-timing-function: ease-out; }
-
-                                                           .accesos-targetas:hover > .targeta-content { transform: translateX(0); }
-
-                                                           .accesos-intro { width: 100%;
-
-                                                                            display: flex;
-                                                                            justify-content: center;
-                                                                            align-items: center;
-                                                                            font-size: 20px;
-                                                                            font-family: "Red Hat Display",sans-serif;
-                                                                            padding: 20px; }
-
-                                                                            .accesos-intro h4 { font-size: 1em;
-                                                                                                color: white;
-                                                                                                font-weight: bold;
-                                                                                                text-align: center;  }
-
-                                                            .accesos-flecha-container { width: 100%;
-
-                                                                                        display: flex;
-                                                                                        justify-content: center;
-                                                                                        align-items: center;
-                                                                                        margin-top: 20px;
-
-                                                                                        position: absolute;
-                                                                                        top: 75%;
-                                                                                        left: 0; }
-
-                                                                                        .accesos-flecha-container img {  }
-
-                                                            .targeta-content { position: absolute;
-                                                                               background-color: #E33700;
-                                                                               border-radius: 10px;
-                                                                               top: 0;
-                                                                               left: 0;
-
-                                                                               display: flex;
-                                                                               justify-content: center;
-                                                                               align-items: center;
-
-                                                                               width: 100%;
-                                                                               height: 100%;
-                                                                               font-size: .8em;
-                                                                               font-family: "Ubuntu",sans-serif;
-                                                                               font-weight: bold;
-                                                                               color: white;
-                                                                               padding: 20px;
-                                                                               transform: translateX(-120%);
-                                                                               transition: transform .4s ease-in-out;
-                                                                               z-index: 2; }
-
-@keyframes targeta_view { from {opacity: 0;
-                                transform: translateY(-40px);  }
-
-                            to { opacity: 1;
-                                 transform: translateY(0); }  }
-
-
-@media screen and (max-width: 1220px) { .accesos-content,
-                                        .accesos-tittle-container { width: 70%; } }
-
-@media screen and (max-width: 1000px) { .accesos-content,
-                                        .accesos-tittle-container { width: 80%; } }
-
-@media screen and (max-width: 900px) { .accesos-content { grid-template-columns: repeat(2,1fr);
-                                                          grid-template-rows: repeat(3,minmax(250px,300px)); } }
-
-@media screen and (max-width: 820px) { .accesos-tittle-container p { display: block; }
-                                       .accesos-content { grid-gap: 15px; } }
-
-@media screen and (max-width: 620px) { .accesos-content { grid-template-columns: repeat(1,1fr);
-                                                          grid-template-rows: repeat(6,250px); }
-
-                                       .accesos-tittle { font-size: 1em; }
-
-                                       .accesos-content { grid-gap: 10px; }
-
-                                       .accesos-intro h4 { font-size: .8em; } }
-
-@media screen and (max-width: 500px) { .accesos-tittle-container p { text-align: center !important; } }
-
-@media screen and (max-width: 420px) { .accesos-content,
-                                       .accesos-tittle-container { width: 100%; } }
-
-
-
-
-
-/* Codigo seccio Personas en linea*/
-
-.enlinea-container { width: 100%;
-                     height: 100vh;
-
-                     display: none;
-                     flex-direction: column;
-                     justify-content: flex-end;
-                     align-items: flex-start;
-                     position: fixed;
-                     top: 0;
-                     left: 0;
-                     overflow: hidden;
-                     z-index: 10000; }
-
-.enlinea-container-open { display: flex; }
-
-                     .enlinea-content { width: 80%;
-                                        max-width: 400px;
-                                        background-color: #000;
-                                        border-radius: 10px;
-                                        padding: 20px;
-                                        margin-bottom: 20px;
-
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: flex-start;
-                                        align-items: flex-start;
-                                        font-size: 20px;
-                                        font-family: "Ubuntu",sans-serif;
-
-                                        transition: transform .5s ease-in-out;
-                                        transform: translateX(-100%); }
-
-                     .enlinea-content-open { transform: translateX(10px); }
-
-                                        .enlinea-content p { font-size: .8em;
-                                                             color: #999;
-                                                             margin-bottom: 10px; }
-
-                                        .enlinea-tittle-container { width: 100%;
-                                                                    display: flex;
-                                                                    flex-wrap: nowrap;
-                                                                    justify-content: flex-start;
-                                                                    align-items: flex-start;
-                                                                    font-size: 20px;
-                                                                    font-family: "Ubuntu",sans-serif; }
-
-                                                                    .enlinea-tittle-container img { margin-right: 5px; }
-
-                                                                    .enlinea-tittle { font-size: .8em;
-                                                                                      color: white; }
-
-
-
-
-/* Codigo seccion  Prueba Social*/
+/* Codigo seccion Social 1*/
 
 .social-container { width: 100%;
 
@@ -2201,8 +167,8 @@ ul { list-style-type: none; }
                     padding: 20px; }
 
                     .social-container h4 { font-size: 1.5em; 
-                                           font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                           color: #E33700;
+                                           font-family: "Raleway","Ubuntu",sans-serif;
+                                           color: #86B302;
                                            margin-bottom: 10px;
                                            font-weight: bold;
                                            text-align: center;
@@ -2210,23 +176,23 @@ ul { list-style-type: none; }
 
                     .social-container p { font-size: .8em;
                                           color: #ccc5;
-                                          margin-bottom: 60px;
+                                          margin-bottom: 40px;
                                           font-family: "Ubuntu",sans-serif;
                                           width: 60%;
                                           text-align: center !important; }
 
-                    .social-grid-container { width: 60%;
+                    .social-grid-container { width: 100%;
 
                                              display: grid;
-                                             grid-template-columns: repeat(2,1fr);
-                                             grid-template-rows: repeat(2,minmax(250px,300px));
-                                             grid-gap: 20px; }
+                                             grid-template-columns: repeat(3,1fr);
+                                             grid-template-rows: repeat(1,minmax(250px,300px));
+                                             grid-gap: 10px; }
 
                                              .social-grid-container div { border-radius: 10px;
                                                                           cursor: pointer; }
 
                                                                          .social1-container { background-image: url(multimedia/imagenes/social1.webp);
-                                                                                              background-position: top;
+                                                                                              background-position: center;
                                                                                               background-size: cover;
                                                                                               background-repeat: no-repeat;
                                                                                               background-attachment: scroll;
@@ -2238,10 +204,13 @@ ul { list-style-type: none; }
                                                                                               align-items: center;
                                                                                               font-size: 20px;
                                                                                               background-color: #12161D;
+                                                                                              transition: transform .5s ease-in-out, opacity .2s linear;
+
+                                                                                              opacity: 0;
                                                                                               transform: scale(.9); }
 
                                                                           .social2-container { background-image: url(multimedia/imagenes/social2.webp);
-                                                                                               background-position: top;
+                                                                                               background-position: center;
                                                                                                background-size: cover;
                                                                                                background-repeat: no-repeat;
                                                                                                background-attachment: scroll;
@@ -2253,25 +222,13 @@ ul { list-style-type: none; }
                                                                                                align-items: center;
                                                                                                font-size: 20px;
                                                                                                background-color: #12161D;
+                                                                                               transition: transform .5s ease-in-out, opacity .2s linear;
+
+                                                                                               opacity: 0;
                                                                                                transform: scale(.9); }
  
-                                                                          .social3-container { background-image: url(multimedia/imagenes/social3.webp);
-                                                                                               background-position: top;
-                                                                                               background-size: cover;
-                                                                                               background-repeat: no-repeat;
-                                                                                               background-attachment: scroll;
-                                                                                               position: relative;
-                                                                                               width: 100%;
-                                                                                               height: 100%;
-                                                                                               display: flex;
-                                                                                               justify-content: center;
-                                                                                               align-items: center;
-                                                                                               font-size: 20px;
-                                                                                               background-color: #12161D;
-                                                                                               transform: scale(.9); }
-
                                                                           .social4-container { background-image: url(multimedia/imagenes/social4.webp);
-                                                                                               background-position: top;
+                                                                                               background-position: center;
                                                                                                background-size: cover;
                                                                                                background-repeat: no-repeat;
                                                                                                background-attachment: scroll;
@@ -2283,34 +240,22 @@ ul { list-style-type: none; }
                                                                                                align-items: center;
                                                                                                font-size: 20px;
                                                                                                background-color: #12161D;
+                                                                                               transition: transform .5s ease-in-out, opacity .2s linear;
+
+                                                                                               opacity: 0;
                                                                                                transform: scale(.9); }
 
-                                                                          .social-efect-view { transform: scale(1); }
+                                                                          .social-efect-view { transform: scale(1);
+                                                                                               opacity: 1; }
 
-
-@media screen and (max-width: 1220px)  { .social-grid-container { width: 70%; }
-                                         .social-container h4,
-                                         .social-container p  {width: 70%; } }
-
-@media screen and (max-width: 1000px) { .social-grid-container { width: 80%; }
-                                        .social-container h4, 
-                                        .social-container p  { width: 80%; } }
-
-@media screen and (max-width: 720px) { .social-grid-container { grid-template-columns: repeat(1,1fr);
-                                                                grid-template-rows: repeat(4,minmax(300px,max-content)); } }
-
-@media screen and (max-width: 620px) { .social-container h4 { font-size: 1em; }
-                                       .social-container p { margin-bottom: 40px;
-                                                             font-size: .77em; } }
-
-@media screen and (max-width: 420px) { .social-grid-container,
-                                       .social-container h4,
+@media screen and (max-width: 710px) { .social-container h4, 
                                        .social-container p  { width: 100%; } }
 
+@media screen and (max-width: 580px) { .social-grid-container { grid-template-columns: repeat(1,1fr);
+                                                                grid-template-rows: repeat(3,minmax(250px,300px)); } }
 
 
-
-/* Codigo seccion modal de apertura para imagen social*/
+/* Codigo seccion modal para apertura de imagenes Social 1*/
 
 .apertura_social-container { width: 100%;
                              height: 100vh;
@@ -2381,184 +326,448 @@ ul { list-style-type: none; }
 
 
 
-/* Codigo seccion final*/
+/*Codigo seccion promesas*/
 
-.final-container { width: 80%;
-                   height: 80vh;
-                   margin: 20px auto;
+.promesas-container { background-color: #86B302;
+                      width: 100%;
 
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      font-family: "Raleway",sans-serif;
+                      padding: 40px 20px;
+                      font-size: 20px;
+                      margin-top: 20px;
+                      border-radius: 5px;  }
+
+                      .promesas-container div { width: 100%;
+                                                font-size: 1.2em;
+                                                color: white;
+                                                font-weight: bold;
+                                                text-align: center; }
+
+                      
+
+
+
+/* Codigo seccion presentacion del curso*/
+
+.presentacion-container { width: 100%;
+                          display: flex;
+                          flex-direction: row;
+                          flex-wrap: wrap;
+                          justify-content: center;
+                          align-items: center;
+                          margin-top: 40px; }
+
+                          .presentacion-curso-container { width: 50%; }
+
+                                                        .presentacion-curso { width: 100%; }
+
+                          .presentacion-garantia-container { width: 50%;
+                                                             display: flex;
+                                                             flex-direction: column;
+                                                             justify-content: center;
+                                                             align-items: flex-start; }
+
+                                                             .presentacion-garantia-content { width: 100%;
+                                                                                              display: flex;
+                                                                                              flex-direction: row;
+                                                                                              justify-content: flex-start;
+                                                                                              align-items: center;
+                                                                                              font-size: 20px;
+                                                                                              font-family: "Ubuntu",sans-serif;
+                                                                                              border: 1px solid #86B302;
+                                                                                              margin-bottom: 10px;
+                                                                                              border-radius: 10px;
+                                                                                              padding: 10px; }
+
+                                                                                              .presentacion-garantia { width: 20%; }
+
+                                                                                              .presentacion-garantia-content span { font-size: .8em;
+                                                                                                                                    color: white;
+                                                                                                                                    margin-left: 5px; }
+                                                            
+
+                                                                                               .presentacion-seguro { width: 20%; }
+
+
+@media screen and (max-width: 1040px) { .presentacion-container { flex-direction: column; }
+
+                                        .presentacion-curso-container,
+                                        .presentacion-garantia-container { width: 100%; }
+
+                                        .presentacion-curso-container { margin-bottom: 10px; } }
+
+
+
+
+/*Codigo seccion lograras*/
+
+.lograras-container { width: 100%;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      margin-top: 20px;
+                      margin-bottom: 20px; }
+
+                      .lograras-content { width: 100%;
+                                          display: flex;
+                                          flex-direction: row;
+                                          justify-content: center;
+                                          align-items: center; }
+
+                                          .lograras-letters-container { width: 50%;
+                                                                        display: flex;
+                                                                        flex-direction: column;
+                                                                        justify-content: flex-start;
+                                                                        align-items: flex-start;
+                                                                        font-size: 20px;
+                                                                        margin-right: 5px; }
+
+                                                                        .lograras-letters-container span { font-size: 1.2em;
+                                                                                                           color: #86B302;
+                                                                                                           margin-bottom: 20px;
+                                                                                                           font-family: "Raleway","Ubuntu",sans-serif;
+                                                                                                           font-weight: bold;  }
+
+                                                                        .lograras-letters-container li { width: 100%;
+                                                                                                         margin-bottom: 5px;
+                                                                                                         font-size: 20px;
+                                                                                                         font-family:"Ubuntu",sans-serif; }
+
+                                                                                                         .lograras-letters-container li i { font-size: .8em;
+                                                                                                                                              color: white; }
+
+                                          .lograras-img-container { width: 50%;
+                                                                    display: flex;
+                                                                    justify-content:center;
+                                                                    align-items: center; }
+
+                                                                    .lograras-img-container img { width: 100%;
+                                                                                                  border-radius: 10px; }
+
+
+@media screen and (max-width: 1100px) { .lograras-content { flex-direction: column-reverse; }
+                                       
+                                        .lograras-letters-container,
+                                        .lograras-img-container { width: 100%; }
+
+                                        .lograras-letters-container { margin-right: 0px;
+                                                                      margin-top: 20px;
+                                                                      padding-left: 20px; } }
+
+
+/* Codigo seccion promesas 2,3 y 4*/
+
+.promesa2-container,
+.promesa3-container,
+.promesa4-container { width: 100%;
+                      border-radius: 5px;
+                      background-color: #86B302;
+                      margin-bottom: 20px;
+                      opacity: 0;
+                      transform: scale(.9);
+                      transition: transform .5s linear, opacity .4s linear;  }
+
+                      .promesas-efect-view { opacity: 1;
+                                             transform: scale(1); }
+
+                      .promesa2-container,
+                      .promesa3-container,
+                      .promesa4-container div { width: 100%;
+                                                padding: 20px;
+                                                font-size: 20px;
+                                                font-family: "Raleway","Ubuntu",sans-serif;
+
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center; }
+
+                                                .promesa2-container,
+                                                .promesa3-container,
+                                                .promesa4-container div i { font-size: 1.5em;
+                                                                            color: white;
+                                                                            font-weight: bold;
+                                                                            text-align: center; }
+
+
+/* codigo seccion contenido de curso*/
+
+.contenido-container { width: 100%;
+                       display: flex;
+                       flex-direction: row-reverse;
+                       justify-content: center;
+                       align-items: center;
+                       margin-top: 40px; }
+
+                       .contenido-content { width: 50%;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: flex-start;
+                                            align-self: flex-start;
+                                            font-size: 20px;
+                                            font-family: "Raleway","Ubuntu",sans-serif;
+                                            margin-left: 5px; }
+
+                                            .contenido-content h4 { font-size: 1.2em;
+                                                                    color: #86B302;
+                                                                    font-weight: bold;
+                                                                    margin-bottom: 20px;
+                                                                    text-align: left;
+                                                                    width: 100%;
+                                                                    padding-left: 20px; }
+
+                                            .contenido-content ul { width: 100%;
+                                                                    padding: 5px 20px;
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    justify-content: flex-start;
+                                                                    align-items: flex-start;
+
+                                                                    font-size: 20px;
+                                                                    font-family: "Ubuntu",sans-serif;
+                                                                    list-style-type: none; }
+
+                                                                    .contenido-content ul span { font-size: 1em;
+                                                                                                 color: #86B302;
+                                                                                                 margin-bottom: 5px;
+                                                                                                 font-weight: bold; }
+
+                                                                    .contenido-content ul li { font-size: .8em;
+                                                                                               color: white;
+                                                                                               margin-bottom: 5px; }
+
+                       .contenido-img-container { width: 50%;
+                                                  display: flex;
+                                                  justify-content: center;
+                                                  align-items: center; }
+
+                                                  .contenido-img-container img { width: 100%;
+                                                                                 border-radius: 10px; }
+
+
+
+@media screen and (max-width: 1400px) { .contenido-container { flex-direction: column-reverse; }
+                                        .contenido-content { margin-left: 0px;
+                                                             margin-top: 20px;
+                                                             width: 100%; }
+
+                                        .contenido-content h4 { padding-left: 0px;
+                                                                text-align: center;
+                                                                align-self: center; }
+
+                                        .contenido-content ul { padding: 5px 0px; } }
+
+@media screen and (max-width: 670px) { .contenido-img-container { width: 100%; } }
+
+@media screen and (max-width: 500px) { .contenido-content h4 { padding: 0 20px;
+                                                               text-align: left; } }
+
+
+
+/* Codigo seccion bonos Tittle*/
+
+.bonos_tittle-container { width: 100%;
+                          background-color: #86B302;
+                          padding: 20px;
+                          border-radius: 10px;
+                          font-size: 20px;
+                          margin-top: 40px;
+
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: center;
+                          align-items: center; }
+
+                          .bonos_tittle-container h4 { font-size: 1.5em;
+                                                        color: white;
+                                                        margin-bottom: 5px;
+                                                        font-family: "Raleway","Ubuntu",sans-serif;
+                                                        font-weight: bold;
+                                                        text-align: center;
+                                                        width: 100%; }
+
+                          .bonos_tittle-container h3   { font-size: 1.3em;
+                                                         color: white;
+                                                         font-family: "Righteous","Ubuntu",sans-serif;
+                                                         font-weight: bold;
+                                                         text-align: center;
+                                                         width: 100%; }
+
+
+
+
+/* Codigo seccion bono 1*/
+
+.bono1-container { width: 100%;
                    display: flex;
                    flex-direction: row;
                    justify-content: center;
-                   align-items: center; }
+                   align-items: center;
+                   background-color: #0D0F14;
+                   border-radius: 10px;
+                   padding: 20px;
+                   margin-top: 20px; }
 
-                   .final-content { width: 50%;
-                                    padding: 20px;
+                   .bono1-content { width: 50%;
                                     display: flex;
                                     flex-direction: column;
                                     justify-content: flex-start;
                                     align-items: flex-start;
-                                    font-size: 20px;
-                                    font-family: "Ubuntu",sans-serif; }
+                                    font-size: 20px; }
 
-                                    .final-tittle1 { font-size: 1.5em;
-                                                     font-family: "Red Hat Display","Ubuntu",sans-serif;
-                                                     font-weight: bold;
-                                                     color: transparent;
-                                                     -webkit-text-stroke: 1px white;
-                                                     margin-bottom: 10px;
-                                                     text-align: left; }
+                                    .bono1-content h4 { font-size: 1.2em;
+                                                        color: #86B302;
+                                                        font-family: "Raleway","Ubuntu",sans-serif;
+                                                        font-weight: bold;
+                                                        margin-bottom: 10px;
+                                                        text-align: left; }
 
-                                    .final-tittle2 { font-size: 1.4em;
-                                                     color: #E33700;
-                                                     font-weight: bold;
-                                                     font-family: "Red Hat Display",sans-serif;
-                                                     margin-bottom: 20px;
-                                                     text-align: left; }
+                                    .bono1-content p { font-size: .8em;
+                                                       color: white;
+                                                       font-family: "Ubuntu",sans-serif; }
 
-                                    .final-content button { width: max-content;
-                                                            padding: 8px 20px;
-                                                            font-size: .8em;
-                                                            font-family: "Ubuntu";
-                                                            font-weight: bold;
-                                                            color: white;
-                                                            background-color: #E33700;
-                                                            border: none;
-                                                            border-radius: 15px;
-                                                            outline: none;
-                                                            margin-bottom: 8px;
-                                                            cursor: pointer;
-                                                            transition: background-color .2s ease-in-out;
-                                                            text-align: center; }
+                   .bono1-img-container { width: 50%;
+                                          display: flex;
+                                          justify-content: center;
+                                          align-items: center; }
 
-                                                            .final-content button:hover { background-color: #E22700; }
-
-                                    .final-whatsapp { background-color: green !important; }
-
-                                    .final-content p { font-size: .8em;
-                                                       color: #ccc;
-                                                       text-align: left; }
-
-                  .final-img-container { width: 50%;
-                                         height: 100%;
-                                         display: flex;
-                                         justify-content: center;
-                                         align-items: center;
-                                         position: relative;
-                                         overflow: hidden; }
-
-                                         .final-decoration { width: 100%;
-                                                             height: 100%;
-
-                                                             position: absolute;
-                                                             top: 0;
-                                                             left: 0;
-                                                             z-index: 1;
-                                                             background: #E33700; 
-                                                             background: -webkit-linear-gradient(to right, #ff6a00, #E33700);
-                                                             background: linear-gradient(to right, #ff6a00, #E33700);
-                                                             clip-path: polygon(100% 0, 100% 0, 100% 100%, 9% 100%);
-                                                             opacity: 0;
-                                                             transform: translateX(40px);
-                                                             transition: transform 1s ease-in-out, opacity 1s ease-in-out;  }
+                                          .bono1-img-container img { width: 80%; }
 
 
-                                          .final-img { width: 90%;
-                                                       opacity: 0;
-                                                       position: relative;
-                                                       z-index: 2;
-                                                       transform: translateX(-40px);
-                                                       transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-                                                       filter: drop-shadow(0 0 10px #E22700); }
 
-                                          
-                                          .final-efect-view { opacity: 1;
-                                                              transform: translateX(0); }
+/* Codigo seccion bono 2*/
 
+.bono2-container { width: 100%;
+                   display: flex;
+                   flex-direction: row;
+                   justify-content: center;
+                   align-items: center;
+                   background-color: #0D0F14;
+                   border-radius: 10px;
+                   padding: 20px;
+                   margin-top: 20px; }
 
-@media screen and (max-width: 1140px) { .final-img { width: 100%; } }
+                   .bono2-content { width: 50%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                    font-size: 20px; }
 
-@media screen and (max-width: 1000px) { .final-container { width: 100%; } }
+                                    .bono2-content h4 { font-size: 1.2em;
+                                                        color: #86B302;
+                                                        font-family: "Raleway","Ubuntu",sans-serif;
+                                                        font-weight: bold;
+                                                        margin-bottom: 10px;
+                                                        text-align: left; }
 
-@media screen and (max-width: 800px) { .final-container { flex-direction: column;
-                                                          height: max-content;
-                                                          background-color: #12161D;
-                                                          margin-bottom: 0px; }
+                                    .bono2-content p { font-size: .8em;
+                                                       color: white;
+                                                       font-family: "Ubuntu",sans-serif; }
 
-                                       .final-content { width: 80%;
-                                                        height: max-content; }
+                   .bono2-img-container { width: 50%;
+                                          display: flex;
+                                          justify-content: center;
+                                          align-items: center; }
 
-                                       .final-img-container { width: 80%;
-                                                              padding: 20px;
-                                                              height: 60vh; }
-
-                                       .final-decoration { display: flex; } }
-
-@media screen and (max-width: 700px) { .final-img-container { height: 50vh; }
-                                       .final-img { width: 100%; }
-                                       .final-decoration { clip-path: polygon(100% 0, 50% 100%, 100% 100%); } }
-
-@media screen and (max-width: 500px) { .final-img-container { height: 40vh; }
-                                       .final-decoration { clip-path: polygon(100% 0, 50% 100%, 100% 100%); } }
-
-@media screen and (max-width: 450px) { .final-img { width: 100%; } 
-                                       .final-content,
-                                       .final-img-container { width: 100%; } }
+                                          .bono2-img-container img { width: 80%; }
 
 
 
 
+/* Codigo seccion bono 3*/
+
+.bono3-container { width: 100%;
+                   display: flex;
+                   flex-direction: row;
+                   justify-content: center;
+                   align-items: center;
+                   background-color: #0D0F14;
+                   border-radius: 10px;
+                   padding: 20px;
+                   margin-top: 20px; }
+
+                   .bono3-content { width: 50%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                    font-size: 20px; }
+
+                                    .bono3-content h4 { font-size: 1.2em;
+                                                        color: #86B302;
+                                                        font-family: "Raleway","Ubuntu",sans-serif;
+                                                        font-weight: bold;
+                                                        margin-bottom: 10px;
+                                                        text-align: left; }
+
+                                    .bono3-content p { font-size: .8em;
+                                                       color: white;
+                                                       font-family: "Ubuntu",sans-serif; }
+
+                   .bono3-img-container { width: 50%;
+                                          display: flex;
+                                          justify-content: center;
+                                          align-items: center; }
+
+                                          .bono3-img-container img { width: 80%; }
 
 
 
 
+/* Codigo seccion bono 4*/
+
+.bono4-container { width: 100%;
+                   display: flex;
+                   flex-direction: row;
+                   justify-content: center;
+                   align-items: center;
+                   background-color: #0D0F14;
+                   border-radius: 10px;
+                   padding: 20px;
+                   margin-top: 20px; }
+
+                   .bono4-content { width: 50%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                    font-size: 20px; }
+
+                                    .bono4-content h4 { font-size: 1.2em;
+                                                        color: #86B302;
+                                                        font-family: "Raleway","Ubuntu",sans-serif;
+                                                        font-weight: bold;
+                                                        margin-bottom: 10px;
+                                                        text-align: left; }
+
+                                    .bono4-content p { font-size: .8em;
+                                                       color: white;
+                                                       font-family: "Ubuntu",sans-serif; }
+
+                   .bono4-img-container { width: 50%;
+                                          display: flex;
+                                          justify-content: center;
+                                          align-items: center; }
+
+                                          .bono4-img-container img { width: 80%; }
 
 
+@media screen and (max-width: 650px) { .bono1-container,
+                                       .bono2-container,
+                                       .bono3-container,
+                                       .bono4-container { flex-direction: column-reverse; }
 
+                                       .bono1-content,
+                                       .bono2-content,
+                                       .bono3-content,
+                                       .bono4-content { width: 100%; }
 
-
-
-
-
-
-
-/*Codigo seccion pie de pagina */
-
-.footer-container { width: 100%;
-                    height: 200px;
-                    background-color: #12161D;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center; }
-
-                    .footer-content { width: 100%;
-                                      height: 100%;
-                                      padding: 20px;
-                                      font-size: 20px;
-                                      font-family: "Ubuntu",sans-serif;
-
-                                      display: flex;
-                                      flex-direction: column;
-                                      justify-content: center;
-                                      align-items: center;
-                                      opacity: 0;
-                                      transition: opacity 1s ease-out; }
-
-                    .footer-content-open { opacity: 1; }
-
-                                      .footer-content span { font-size: .8em;
-                                                             color: #999;
-                                                             text-align: center;
-                                                             margin-bottom: 10px; }
-
-                                      .footer-content p { font-size: .7em;
-                                                          color: #999;
-                                                          text-align: center !important; }
-
-
-/* Codigos complementarios Medias Queries*/
-
-@media screen and (max-height: 540px) { .promesa1-container,.promesa2-container,.promesa3-container,.promesa4-container,.promesa5-container { height: 100vh;
-                                                                                                                                              margin: 40px auto; }
-
+                                       .bono1-img-container,
+                                       .bono2-img-container,
+                                       .bono3-img-container,
+                                       .bono4-img-container { width: 100%; } }
