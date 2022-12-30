@@ -771,3 +771,274 @@ ul { color:white; }
                                        .bono2-img-container,
                                        .bono3-img-container,
                                        .bono4-img-container { width: 100%; } }
+
+
+/* Codigo seccion promesa 5*/
+
+.promesa5-container { width: 100%;
+                      background-color: #86B302;
+                      border-radius: 10px;
+                      padding: 20px;
+                      margin-top: 20px;
+                      font-size: 20px;
+                      font-family: "Raleway","Ubuntu",sans-serif; }
+
+                      .promesa5-container h4 { font-size: 1.5em;
+                                               font-weight: bold;
+                                               color: white;
+                                               text-align: center; }
+
+
+/* Codigo seccion promesa 6*/
+
+.promesa6-container { width: 100%;
+                      background-color: #86B302;
+                      border-radius: 10px;
+                      padding: 20px;
+                      margin-top: 20px;
+                      font-size: 20px;
+                      font-family: "Raleway","Ubuntu",sans-serif; }
+
+                      .promesa6-container h4 { font-size: 1.5em;
+                                               font-weight: bold;
+                                               color: white;
+                                               text-align: center; }
+
+
+/* Codigo seccion precios */
+
+.precios-container { width: 100%;
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     align-items: center;
+                     margin-top: 20px;
+                     border-radius: 10px;
+                     background-color: #0D0F14;
+                     padding: 20px; }
+
+                     .precio_normal-container { width: 100%;
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                align-items: center;
+                                                font-size: 20px;
+                                                font-family: "Righteous","Ubuntu",sans-serif;
+                                                margin-bottom: 20px; }
+
+                                                .precio_normal-container h4 { font-size: 1.8em;
+                                                                              color: white;
+                                                                              font-weight: bold;
+                                                                              margin-bottom: 10px;
+                                                                              text-align: center; }
+
+                                                .precio_normal-container h3 { font-size: 2em;
+                                                                              color: #86B302;
+                                                                              font-weight: bold;
+                                                                              font-family: "Raleway","Ubuntu",sans-serif;
+                                                                              border-radius: 10px;
+                                                                              border: 1px solid #86B302;
+                                                                              padding: 20px;
+                                                                              text-align: center; }
+
+                    .precio_oferta-container { width: 100%;
+                                               display: flex;
+                                               flex-direction: column;
+                                               justify-content: center;
+                                               align-items: center;
+                                               font-size: 20px;
+                                               font-family: "Righteous","Ubuntu",sans-serif; }
+
+                                               .precio_oferta-container h4 { font-size: 1.8em;
+                                                                              color: white;
+                                                                              font-weight: bold;
+                                                                              margin-bottom: 10px;
+                                                                              text-align: center;  }
+
+                                               .precio_oferta-container h3 { font-size: 1.5em;
+                                                                             color: #86B302;
+                                                                             font-family: "Raleway","Ubuntu",sans-serif;
+                                                                             text-align: center; }
+
+
+/* Codigo seccion Conclusiones*/
+
+.conclusiones-container { width: 100%;
+                          background-color: #0D0F14;
+                          border-radius: 10px;
+                          padding: 20px;
+                          margin-top: 20px;
+                          display: flex;
+                          flex-direction: row;
+                          justify-content: center;
+                          align-items: center;  }
+
+                          .conclusiones_curso-container { width: 50%;
+                                                          display: flex;
+                                                          flex-direction: column;
+                                                          justify-content: center;
+                                                          align-items: center;
+                                                          font-size: 20px;
+                                                          font-family: "Righteous","Raleway","Ubuntu",sans-serif; }
+
+                                                          .conclusiones_curso-container h4 { font-size: 1.5em;
+                                                                                             color: white;
+                                                                                             font-weight: bold;
+                                                                                             margin-bottom: 20px;
+                                                                                             text-align: center; }
+
+                                                           .conclusiones_curso-container img  { width: 100%; }
+
+                          .conclusiones_bonos-container { width: 50%;
+                                                          display: flex;
+                                                          flex-direction: column;
+                                                          justify-content: center;
+                                                          align-items: center;
+                                                          font-size: 20px;
+                                                          font-family: "Righteous","Raleway","Ubuntu",sans-serif; }
+
+                                                          .conclusiones_bonos-container h4 { font-size: 1.5em;
+                                                                                             color: white;
+                                                                                             font-weight: bold;
+                                                                                             margin-bottom: 20px;
+                                                                                             text-align: center; }
+
+                                                          .conclusiones_bonos-container img { width: 100%;
+                                                                                              filter: drop-shadow(0 0px 20px #86B302); }
+
+@media screen and (max-width: 940px) { .conclusiones-container { flex-direction: column; }
+                                       .conclusiones_curso-container,
+                                       .conclusiones_bonos-container { width: 100%; }
+
+                                       .conclusiones_bonos-container  { margin-top: 20px; } }
+
+
+
+/* Codigo seccion oferta*/
+
+.oferta-container { width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #0D0F14;
+                    border-radius: 10px;
+                    padding: 20px;
+                    margin-top: 20px;
+                    font-size: 20px; }
+
+                    .oferta-content { width: 100%;
+                                      display: flex;
+                                      flex-direction: column;
+                                      justify-content: center;
+                                      align-items: center;
+                                      font-size: 20px;
+                                      font-family: "Raleway","Ubuntu",sans-serif; }
+
+                                      .oferta-content h4 { font-size: 1.8em; 
+                                                           color: white;
+                                                           font-weight: bold;
+                                                           margin-bottom: 10px;
+                                                           text-align: center; }
+
+                                      .oferta-content h3 { font-size: 2em;
+                                                           color: #86B302;
+                                                           border-radius: 10px;
+                                                           border: 1px solid #86B302;
+                                                           padding: 20px;
+                                                           text-align: center;
+                                                           margin-bottom: 20px; }
+
+                                       .oferta-content p { font-size: 1.2em;
+                                                           color: #86B302;
+                                                           text-align: center; }
+
+                   .oferta-buttom { width: 50%;
+                                    padding: 20px;
+                                    background-color: #86B302;
+                                    border-radius: 10px;
+                                    margin-top: 30px;
+                                    cursor: pointer;
+                                    text-align: center;
+
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 1.2em;
+                                    font-family: "Raleway","Ubuntu",sans-serif;
+                                    color: white;
+                                    transition: background-color .2s linear;
+                                    filter: drop-shadow(0 0px 20px #6F9209);  }
+
+                                    .oferta-buttom:hover { background-color: #6F9209; }
+
+@media screen and (max-width: 930px) { .oferta-buttom { width: 70%; } }
+@media screen and (max-width: 520px) { .oferta-buttom { width: 80%; } }
+@media screen and (max-width: 470px) { .oferta-buttom { width: 100%; } }
+
+
+
+/* Codigo seccion final*/
+
+.final-container { width: 100%;
+                   padding: 20px;
+                   background-color: #0D0F14;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: center;
+                   align-items: center;
+                   margin-top: 20px;
+                   border-radius: 10px }
+
+                   .final-imgs-container { width: 100%;
+                                           display: flex;
+                                           justify-content: center;
+                                           align-items: center;
+                                           margin-bottom: 10px; }
+
+                                           .final-img1 { width: 20%; }
+                                           .final-img2 { width: 15%; }
+
+                   .final-content { width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 20px;
+                                    font-family: "Raleway","Ubuntu",sans-serif; }
+
+                                    .final-content h4 { font-size: 1.2em;
+                                                        color: #86B302;
+                                                        font-weight: bold;
+                                                        margin-bottom: 10px;
+                                                        text-align: center; }
+
+                                    .final-content p { font-size: .8em;
+                                                       color: white;
+                                                       text-align: center;
+                                                       font-family: "Ubuntu",sans-serif; }
+
+@media screen and (max-width: 500px) { .final-img1{ width: 30% }
+                                       .final-img2 { width: 25% } }
+
+
+/* Codigo footer*/
+
+footer { width: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         font-size: 20px;
+         font-family: "Ubuntu",sans-serif;
+         margin: 40px 0px; }
+
+         footer h4 { font-size: .9em;
+                     color: white;
+                     font-weight: bold;
+                     margin-bottom: 20px;
+                     text-align: center; }
+
+         footer p { font-size: .8em;
+                    color: white;
+                    text-align: center; }
