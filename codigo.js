@@ -70,3 +70,10 @@ const promesa4_view = (entryes)=> { entryes.forEach(entrada=>{ if(entrada.isInte
 
 const promesa4_watch = new IntersectionObserver(promesa4_view);
 promesa4_watch.observe(promesa4_container);
+
+
+//  Codigo redirecion de boton de compra
+
+const oferta_buttom = document.querySelector(".oferta-buttom");
+
+oferta_buttom.addEventListener("click", ()=>{ window.open("https://go.hotmart.com/U74151808E?ap=5188"); });
