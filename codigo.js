@@ -34,15 +34,15 @@ apertura_social_cerrar.addEventListener("click", ()=>{ apertura_social_content.c
 
 
 // Codigo intersection observer para imagenes de social
-
+const social_grid_container = document.querySelector(".social-grid-container");
 const img_socials = document.querySelectorAll(".social");
 
-const img_socials_view = (entryes)=>{ entryes.forEach(entrada=>{  if(entrada.isIntersecting) { img_socials.forEach(social=>{ social.classList.add("social-efect-view"); }); }
-                                                                        else img_socials.forEach(social=>{ social.classList.remove("social-efect-view"); });  });  }
+const social_grid_container_view = (entryes)=>{ entryes.forEach(entrada=>{  if(entrada.isIntersecting) { img_socials.forEach(social=>{ social.classList.add("social-efect-view"); }); }
+                                                                            else img_socials.forEach(social=>{ social.classList.remove("social-efect-view"); });  });  }
 
-const img_socials_watch = new IntersectionObserver(img_socials_view);
+const social_grid_container_watch = new IntersectionObserver(social_grid_container_view);
 
-img_socials.forEach(social=>{ img_socials_watch.observe(social); });
+social_grid_container_watch.observe(social_grid_container);
 
 
 // Codigo intersection observer para promesas 2 3 y 4
