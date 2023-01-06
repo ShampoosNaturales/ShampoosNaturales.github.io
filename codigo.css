@@ -757,6 +757,21 @@ ul { color:white; }
                                           .bono4-img-container img { width: 80%; }
 
 
+.bono-valor { font-size: 1em;
+              color: white;
+              margin-top: 20px;
+              border-radius: 10px;
+              border: 1px solid #86B302;
+              padding: 10px;
+              font-family: "Raleway","Ubuntu",sans-serif;
+              font-weight: bold; }
+
+.bono-gratis { font-size: 1.2em;
+               color: #86B302;
+               font-family: "Raleway","Ubuntu",sans-serif;
+               margin-top: 8px;
+               font-weight: bold; }
+
 @media screen and (max-width: 650px) { .bono1-container,
                                        .bono2-container,
                                        .bono3-container,
