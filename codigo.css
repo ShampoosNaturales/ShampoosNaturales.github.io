@@ -804,6 +804,109 @@ ul { color:white; }
                                                text-align: center; }
 
 
+/* Codigo seccion muestra*/
+
+.muestra-container { width: 100%;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     font-size: 20px;
+                     margin-top: 20px;
+                     font-family: "Raleway","Ubuntu",sans-serif; }
+
+                     .muestra-img-container { width: 100%;
+                                              display: flex;
+                                              justify-content: center;
+                                              align-items: center; }
+
+                                              .muestra-img-container img { width: 100%;
+                                                                           border-radius: 10px; }
+
+
+
+
+
+
+
+/* Codigo seccion social final*/
+
+.social_final-container { width: 100%;
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: center;
+                          align-items: center;
+                          font-size: 20px;
+                          font-family: "Raleway","Ubuntu",sans-serif;
+                          margin-top: 20px; }
+
+                           .social_final-container h4 { font-size: 1.2em;
+                                                        color: #86B302;
+                                                        font-weight: bold;
+                                                        text-align: center;
+                                                        margin-bottom: 10px; }
+
+                           .social_final-container p { font-size: .9em;
+                                                       color: white;
+                                                       text-align: center;
+                                                       margin-bottom: 20px; }
+
+                           .social_final-content { width: 100%;
+                                                   display: grid;
+                                                   grid-template-columns: repeat(2,1fr);
+                                                   grid-template-rows: repeat(1,minmax(min-content,max-content));
+                                                   grid-gap: 10px;
+                                                   grid-auto-flow: dense; }
+
+                                                   .social_final-targeta { background-color: #0D0F14;
+                                                                           border-radius: 10px;
+                                                                           padding: 20px;
+                                                                           display: flex;
+                                                                           flex-direction: column;
+                                                                           justify-content: center;
+                                                                           align-items: flex-start; }
+
+                                                                           .social_final-img-container { width: 40px;
+                                                                                                         display: flex;
+                                                                                                         justify-content: center;
+                                                                                                         align-items: center;
+                                                                                                         border-radius: 50%;
+                                                                                                         margin-bottom: 10px;  }
+
+                                                                                                         .social_final-img-container img { width: 100%;
+                                                                                                                                           border-radius: 50%; }
+
+                                                                           .social_final-comentario { width: 100%;
+                                                                                                      display: flex;
+                                                                                                      flex-direction: column;
+                                                                                                      justify-content: flex-start;
+                                                                                                      align-items: flex-start;
+                                                                                                      font-size: 20px;
+                                                                                                      font-family: "Ubuntu",sans-serif; }
+
+                                                                                                      .social_final-comentario span { font-size:.9em;
+                                                                                                                                      font-weight: bold;
+                                                                                                                                      color: #86B302;
+                                                                                                                                      margin-bottom: 5px; }
+
+                                                                                                       .social_final-comentario p { font-size: .8em;
+                                                                                                                                    color: white;
+                                                                                                                                    text-align: left; }
+
+@media screen and (max-width: 880px) { .social_final-content { grid-template-columns: repeat(1,1fr);
+                                                               grid-template-rows: repeat(2,minmax(min-content,max-content)); }
+
+                                       .social_final-comentario span { font-size: .8em; } }
+
+
+
+
+
+
+
+
+
+
+
 /* Codigo seccion promesa 6*/
 
 .promesa6-container { width: 100%;
